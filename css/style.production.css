@@ -5,10 +5,6 @@
 * Browsers: last 4 version
 */
 
-:root {
-  /* End of color variables */
-}
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -148,10 +144,12 @@ button:focus,
 
   .grid__item:last-child {
     -ms-grid-column: 3;
+    grid-column: 3;
     grid-column-start: 3;
     -ms-grid-column-span: 0;
     grid-column-end: 3;
     -ms-grid-row: 1;
+    grid-row: 1;
     grid-row-start: 1;
     -ms-grid-row-span: 2;
     grid-row-end: 3;
