@@ -5,9 +5,15 @@
 * Browsers: last 4 version
 */
 
+
+:root {
+
+  /* End of color variables */
+}
+
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -15,8 +21,19 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
+body, html {
+  height: 100%;
+}
+ 
 h1 {
   font-size: 30px;
   font-weight: 700;
@@ -148,13 +165,11 @@ button:focus,
 
   .grid__item:last-child {
     -ms-grid-column: 3;
-    grid-column: 3;
-    grid-column-start: 3;
+        grid-column-start: 3;
     -ms-grid-column-span: 0;
     grid-column-end: 3;
     -ms-grid-row: 1;
-    grid-row: 1;
-    grid-row-start: 1;
+        grid-row-start: 1;
     -ms-grid-row-span: 2;
     grid-row-end: 3;
 
@@ -171,8 +186,8 @@ button:focus,
   -o-transition-property: font-weight;
   transition-property: font-weight;
   -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .navigation-list a:hover,
@@ -185,13 +200,6 @@ button:focus,
   margin-left: 15px;
 }
 
-.profile__portrait {
-  float: left;
-  width: 250px;
-  margin-right: 40px;
-  border-radius: 50%;
-}
-
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,14 +210,14 @@ button:focus,
 
 .page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -224,14 +232,28 @@ button:focus,
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  margin-top: auto;
 }
 
 .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 700px;
   margin: 0 auto;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
 }
 
 .about-me {
@@ -270,75 +292,75 @@ textarea {
 
 .cloud-back {
   -webkit-animation-duration: 20s;
-  animation-duration: 20s;
+          animation-duration: 20s;
   -webkit-animation-name: cloud-move-reverse;
-  animation-name: cloud-move-reverse;
+          animation-name: cloud-move-reverse;
   -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
-  animation-direction: alternate;
+          animation-direction: alternate;
   -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
   }
 }
 
 .cloud-front {
   -webkit-animation-duration: 12s;
-  animation-duration: 12s;
+          animation-duration: 12s;
   -webkit-animation-name: cloud-move;
-  animation-name: cloud-move;
+          animation-name: cloud-move;
   -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
-  animation-direction: alternate;
+          animation-direction: alternate;
   -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 
@@ -351,7 +373,7 @@ textarea {
 
   /* shorthand of the above code */
   -webkit-animation: 4s color-change infinite alternate linear;
-  animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
 }
 
 @-webkit-keyframes color-change {
@@ -401,7 +423,7 @@ textarea {
 
 .blinking-light {
   -webkit-animation: 1s blink infinite alternate linear;
-  animation: 1s blink infinite alternate linear;
+          animation: 1s blink infinite alternate linear;
 }
 
 @-webkit-keyframes blink {
