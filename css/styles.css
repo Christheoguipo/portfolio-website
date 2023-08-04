@@ -31,8 +31,14 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
 }
 
+body, html {
+  height: 100%;
+}
+ 
 h1 {
   font-size: 30px;
   font-weight: var(--header-font-weight);
@@ -161,13 +167,6 @@ button:focus,
   margin-left: 15px;
 }
 
-.profile__portrait {
-  float: left;
-  width: 250px;
-  margin-right: 40px;
-  border-radius: 50%;
-}
-
 .page-header {
   display: flex;
   width: 100%;
@@ -192,6 +191,7 @@ button:focus,
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: auto;
 }
 
 .profile {
