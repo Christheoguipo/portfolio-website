@@ -14,6 +14,7 @@
   --sun-afternoon-color: #f76414;
   --blinking-light-off-color: white;
   --blinking-light-on-color: red;
+  --error-message-color: red;
 
   /* End of color variables */
   --header-font-weight: 700;
@@ -235,6 +236,17 @@ button:focus,
 input[type=submit] {
   border: var(--border);
   border-radius: 5px;
+}
+
+.input-wrapper {
+  display: inline-block;
+  width: 100%;
+}
+
+.error-message {
+  color: var(--error-message-color);
+  font-size: 0.8em;
+  text-align: left;
 }
 
 textarea {
