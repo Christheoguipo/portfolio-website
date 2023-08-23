@@ -39,14 +39,20 @@
         <h1>Contact</h1>
 
         <form method="post" id="contact-form">
-            <label class="standard-label" for="contact-email">E-mail: </label>
-            <input type="email" id="contact-email" class="input" required>
+            <div class="input-wrapper">
+                <label class="standard-label" for="contact-email">E-mail: </label>
+                <input type="email" id="contact-email" class="input" required>
+            </div>
 
-            <label class="standard-label" for="contact-tel">Telephone: </label>
-            <input type="tel" id="contact-tel" class="input" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+            <div class="input-wrapper">
+                <label class="standard-label" for="contact-tel">Telephone: </label>
+                <input type="tel" id="contact-tel" class="input" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+            </div>
 
-            <label class="standard-label" for="contact-message">Message: </label>
-            <textarea maxlength="240" id="contact-message" class="input" required></textarea>
+            <div class="input-wrapper">
+                <label class="standard-label" for="contact-message">Message: </label>
+                <textarea maxlength="240" id="contact-message" class="input" required></textarea>
+            </div>
 
             <input class="button input" type="submit" value="Send message">
         </form>
@@ -67,7 +73,7 @@
         </div>
     </footer>
 
-    <!-- <script src="js/tota11y.min.js"></script> -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
