@@ -285,6 +285,17 @@ input[type=submit] {
   border-radius: 5px;
 }
 
+.input-wrapper {
+  display: inline-block;
+  width: 100%;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  text-align: left;
+}
+
 textarea {
   height: 150px;
   resize: vertical;
