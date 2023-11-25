@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
@@ -40,8 +40,41 @@
         <div class="grid">
             <div class="grid__item">
                 <h2>Meet App</h2>
-                <p>This is my mobile App project.</p>
-                <a href="https://christheoguipo.github.io/meet/">See Project</a>
+                <div class="project-img-wrapper">
+                    <img class="project-img" src="./img/meet-app-screenshot.png" alt="Screenshot of my Meet App">
+                </div>
+                <p class="project-description">
+                    The Meet app is a progressive web application that offers offline functionality and utilizes serverless architecture developed through 
+                    test-driven development (TDD). Users can access upcoming events for specific cities at any time. 
+                    The app and its serverless backend are hosted online and can be installed and used across devices, even offline. 
+                    This project showcases next-generation serverless infrastructure, offers a seamless user experience through PWA, and emphasizes 
+                    quality code with TDD.
+                </p>
+
+                <div class="grid-tech-and-links">
+                    <div>
+                        <h4>Technologies used:</h4>
+                        <ul>
+                            <li>React</li>
+                            <li>React Bootstrap</li>
+                            <li>Recharts</li>
+                            <li>Testing Libraries:
+                                <ul>
+                                    <li>Jest-Cucumber</li>
+                                    <li>Puppeteer</li>
+                                    <li>React Testing Library</li>
+                                </ul>
+                            </li>
+                            <li>AWS</li>
+                            <li>Google API</li>
+                        </ul>
+                    </div>
+                    <div class="project-links-wrapper">
+                        <h4>Check out the links below:</h4>
+                        <a href="https://christheoguipo.github.io/meet/" target="_blank">Live Project</a>
+                        <a href="https://github.com/Christheoguipo/meet" target="_blank">Github Repository</a>
+                    </div>
+                </div>
             </div>
             <div class="grid__item">
                 <h2>To Do List</h2>
