@@ -7,7 +7,7 @@
   --active-color: #489c79;
   --button-text-color: white;
   --button-border-bottom-color: rgba(0, 0, 0, 0.3);
-  --grid-item-bg-color: lightgray;
+  --grid-item-bg-color: whitesmoke;
   --input-border-color: #eee;
   --sun-morning-color: #edc655;
   --sun-noon-color: #fcffad;
@@ -149,6 +149,13 @@ button:focus,
     grid-row: 1 / 3;
     */
   }
+
+  .grid-tech-and-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 0;
+  }
 }
 
 .navigation-list {
@@ -240,6 +247,16 @@ input[type=submit] {
 textarea {
   height: 150px;
   resize: vertical;
+}
+
+.project-description {
+  text-align: justify;
+}
+
+.project-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cloud-back {
@@ -334,10 +351,21 @@ textarea {
   }
 }
 
+.project-img-wrapper {
+  height: 400px;
+  width: 600px;
+}
+
+.project-img {
+  height: 100%;
+  width: 100%;
+}
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
+  
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
