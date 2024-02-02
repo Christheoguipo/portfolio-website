@@ -1,60 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Christheo Guipo</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script defer src="scripts/script.js"></script>
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Christheo Guipo</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
-</head>
-
-<body>
-    <header class="page-header">
-        <img src="img/christheo-guipo-logo.svg" class="page-header__item page-header__logo"
-            alt="My personal logo, a text logo in uppercase letters of my full name">
-        <nav class="page-header__item">
-            <ul role="menubar" class="navigation-list">
-                <li role="presentation">
-                    <a href="index.html" role="menuitem"
-                        class="navigation-list__item navigation-list__item--active">Home</a>
-                </li>
-                <li role="presentation">
-                    <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
-                </li>
-                <li role="presentation">
-                    <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-                </li>
-                <li role="presentation">
-                    <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <section class="centered-profile">   
-        <div class="profile">
-            <!-- Add your Portrait image here -->
-            <img src="img/profile-portrait.jpg" class="profile__portrait" alt="A photograph of me">
-            <div>
-                <h1>Hello World!</h1>
-                <p>
-                    My name is Christheo Guipo. I am a <span>web</span> developer from Germany.
-                </p>
-                <a href="work.html">Check out some of my code.</a>
+    <body>
+        <header class="page-header">
+            <div class="page-header__content">
+                <img src="img/christheo-guipo-logo.svg" class="page-header__logo"
+                            alt="My personal logo, a text logo in uppercase letters of my full name">
+                    
+                <nav class="navbar">
+                    <ul role="menubar" class="navigation-list">
+                        <li role="presentation" class="navigation-list__item">
+                            <a href="#home-section" role="menuitem" class="navigation-list__link active" >Home</a>
+                        </li>
+                        <li role="presentation" class="navigation-list__item">
+                            <a href="#about-section" role="menuitem" class="navigation-list__link">About Me</a>
+                        </li>
+                        <li role="presentation" class="navigation-list__item">
+                            <a href="#projects-section" role="menuitem" class="navigation-list__link">Projects</a>
+                        </li>
+                        <li role="presentation" class="navigation-list__item">
+                            <a href="#contact-section" role="menuitem" class="navigation-list__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-    </section>
-    <footer class="page-footer">
-        <p>Find me on</p>
-        <div class="social-media">
-            <a href="https://github.com/Christheoguipo" target="_blank"><img src="img/github_icon.svg" alt="Github"></a>
-            <a href="www.linkedin.com/in/christheoguipo" target="_blank"><img src="img/linkedin_icon.svg" alt="LinkedIn"></a>
-            <a href="https://medium.com/@christheo.guipo" target="_blank"><img src="img/medium-icon-svgrepo-com.svg" alt="Medium"></a>
-        </div>
-    </footer>
-</body>
+        </header>
 
+        <main>
+            <section id="home-section">
+                <div class="centered-profile">   
+                    <div class="profile">
+                        <!-- Add your Portrait image here -->
+                        <img src="img/profile-portrait.jpg" class="profile__portrait" alt="A photograph of me">
+                        <div>
+                            <h1>Hello, I'm <span class="highlight">Christheo Guipo</span>.
+                                <br>
+                                I am an aspiring web developer.
+                            </h1>
+                            <a href="#projects-section" class="button">Check out some of my Projects.</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about-section">
+                <div class="about-me-body" >
+                    <div class="about-me">
+                        <h1>About Me</h1>
+                        <p>This page is all about me. I love building things on the internet, making them look great and work smoothly behind the scenes. I'm big 
+                            on writing tests to ensure everything runs like clockwork. When I'm not coding, you'll likely find me immersed in a game of chess or 
+                            watching videos about it.
+                        </p>
+                        <a href="files/cv.pdf" class="button download" download>Download my CV</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects-section">
+                <div class="projects">
+                    <h1>Projects</h1>
+                    <div class="grid">
+                        <div class="grid__item">
+                            <h2>Meet App</h2>
+                            <div class="project-img-wrapper">
+                                <img class="project-img" src="./img/meet-app-screenshot.png" alt="Screenshot of the Meet App">
+                            </div>
+                            <p class="project-description">
+                                The Meet app is a progressive web application (PWA) with offline capabilities, employing serverless architecture developed
+                                through test-driven development (TDD).
+                            </p>
+            
+                            <div class="grid-tech-and-links">
+                                <div class="grid-tech-and-links__item">
+                                    <h4>Technologies used:</h4>
+                                    <ul>
+                                        <li>React</li>
+                                        <li>React Bootstrap</li>
+                                        <li>Recharts</li>
+                                        <li>Testing Libraries:
+                                            <ul>
+                                                <li>Jest-Cucumber</li>
+                                                <li>Puppeteer</li>
+                                                <li>React Testing Library</li>
+                                            </ul>
+                                        </li>
+                                        <li>AWS</li>
+                                        <li>Google API</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links-wrapper">
+                                    <h4>Check out the links below:</h4>
+                                    <a href="https://christheoguipo.github.io/meet/" target="_blank">Live Project</a>
+                                    <a href="https://github.com/Christheoguipo/meet" target="_blank">Github Repository</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__item">
+                            <h2>MyFlix Angular Client</h2>
+                            <div class="project-img-wrapper">
+                                <img class="project-img" src="./img/myflix-angular-client-screenshot.png" alt="Screenshot of the myFlix Angular Client App">
+                            </div>
+                            <p class="project-description">
+                                The myFlix Angular Client is a user-friendly movie database built with Angular, enabling users to explore classic movies, create
+                                accounts, log in, and save favorites with a responsive and dynamic interface.
+                            </p>
+            
+                            <div class="grid-tech-and-links">
+                                <div class="grid-tech-and-links__item">
+                                    <h4>Technologies used:</h4>
+                                    <ul>
+                                        <li>Angular</li>
+                                        <li>Angular Material</li>
+                                        <li>TypeScript</li>
+                                        <li>Typedoc</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links-wrapper">
+                                    <h4>Check out the links below:</h4>
+                                    <a href="https://christheoguipo.github.io/myFlix-Angular-client/" target="_blank">Live Project</a>
+                                    <a href="https://github.com/Christheoguipo/myFlix-Angular-client" target="_blank">Github Repository</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__item">
+                            <h2>Movie Vault App</h2>
+                            <div class="project-img-wrapper">
+                                <img class="project-img" src="./img/movie-vault-screenshot.png" alt="Screenshot of the Movie Vault App">
+                            </div>
+                            <p class="project-description">
+                                The Movie Vault App is a dynamic web application that allows users to browse a collection of movies, manage their profiles, and create
+                                a personalized list of favorite movies.
+                            </p>
+            
+                            <div class="grid-tech-and-links">
+                                <div class="grid-tech-and-links__item">
+                                    <h4>Technologies used:</h4>
+                                    <ul>
+                                        <li>React</li>
+                                        <li>React Bootstrap</li>
+                                        <li>Redux</li>
+                                        <li>Parcel</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links-wrapper">
+                                    <h4>Check out the links below:</h4>
+                                    <a href="https://retro-movie-vault.netlify.app/" target="_blank">Live Project</a>
+                                    <a href="https://github.com/Christheoguipo/myFlix-client" target="_blank">Github Repository</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__item">
+                            <h2>Simple Pokédex App</h2>
+                            <div class="project-img-wrapper">
+                                <img class="project-img" src="./img/simple-pokedex-screenshot.png" alt="Screenshot of the Simple Pokédex App">
+                            </div>
+                            <p class="project-description">
+                                The Simple Pokédex App is a straightforward and user-friendly Pokémon encyclopedia that allows users to explore information about
+                                various Pokémon in a clean and intuitive interface.
+                            </p>
+            
+                            <div class="grid-tech-and-links">
+                                <div class="grid-tech-and-links__item">
+                                    <h4>Technologies used:</h4>
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Pokémon API</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links-wrapper">
+                                    <h4>Check out the links below:</h4>
+                                    <a href="https://christheoguipo.github.io/simple-pokedex-app/" target="_blank">Live Project</a>
+                                    <a href="https://github.com/Christheoguipo/simple-pokedex-app" target="_blank">Github Repository</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__item">
+                            <h2>Retro Movie Vault API</h2>
+                            <div class="project-img-wrapper">
+                                <img class="project-img" src="./img/retro-movie-vault-api-documentation-screenshot.png" alt="Screenshot of Retro Movie Vault API Documentation">
+                            </div>
+                            <p class="project-description">
+                                The Retro Movie Vault API is a RESTful web service that provides access to a curated collection of classic movies. It serves as a
+                                backend for applications or services that want to integrate nostalgic movie content into their platforms.
+                            </p>
+            
+                            <div class="grid-tech-and-links">
+                                <div class="grid-tech-and-links__item">
+                                    <h4>Technologies used:</h4>
+                                    <ul>
+                                        <li>Node.js</li>
+                                        <li>Express.js</li>
+                                        <li>MongoDB</li>
+                                        <li>Mongoose</li>
+                                        <li>APIdoc</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links-wrapper">
+                                    <h4>Check out the links below:</h4>
+                                    <a href="https://retro-movie-vault-5ccf6999c998.herokuapp.com/" target="_blank">Documentation</a>
+                                    <a href="https://github.com/Christheoguipo/retro-movie-vault-api" target="_blank">Github Repository</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__item">
+                            <h2>Chat Demo App</h2>
+                            <div class="project-img-wrapper">
+                                <!-- <div class="project-img-wrapper image-grid"> -->
+                                <!-- <img class="project-img" src="./img/chat-welcome-screenshot.png" alt="Screenshot of the Chat Demo Welcome Screen"> -->
+                                <img class="project-img" src="./img/chat-both-screens.png" alt="Screenshot of the Chat Demo Chat Room Screen">
+                            </div>
+                            <p class="project-description">
+                                The Chat Demo App is a straightforward Android application showcasing basic chat functionality, allowing users to exchange
+                                messages, images and videos within a chat interface.
+                            </p>
+            
+                            <div class="grid-tech-and-links">
+                                <div class="grid-tech-and-links__item">
+                                    <h4>Technologies used:</h4>
+                                    <ul>
+                                        <li>React</li>
+                                        <li>React Native</li>
+                                        <li>Firebase</li>
+                                        <li>Gifted Chat</li>
+                                        <li>Expo</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links-wrapper">
+                                    <h4>Check out the links below:</h4>
+                                    <a href="https://github.com/Christheoguipo/chat-demo" target="_blank">Github Repository</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact-section">
+                <div class="centered-profile">
+                    <div class="contact">
+                        <div>
+                            <h1>Let's Get Connected</h1>
+                        </div>
+        
+                        <div class="grid-contact-icons">
+                            <a class="contact-icons" href="mailto:christheo.guipo@gmail.com" target="_blank">
+                                <img  src="img/gmail-icon.svg" alt="Gmail icon"><span>Gmail</span> 
+                            </a>
+                            <a class="contact-icons" href="https://github.com/Christheoguipo" target="_blank">
+                                <img src="img/github_icon.svg" alt="Github"><span>Github</span></a>
+                            <a class="contact-icons" href="https://www.linkedin.com/in/christheoguipo" target="_blank">
+                                <img src="img/linkedin_icon.svg" alt="LinkedIn"><span>LinkedIn</span></a>
+                            <a class="contact-icons" href="https://medium.com/@christheo.guipo" target="_blank">
+                                <img src="img/medium-icon-svgrepo-com.svg" alt="Medium"><span>Medium</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
