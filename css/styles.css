@@ -1,11 +1,12 @@
 :root {
+  /* Start of color variables */
+
   --active-color: #EE6B4D;
 
   --grid-item-bg-color: #9BC0D9 ;
   --grid-item-text-color: #323232;
   --input-border-color: #eee;
 
-  /* --navbar-color: #004646; */
   --navbar-color: #293241;
   --bg-color-odd: #edfafb;
   --bg-color-even:#3D5B81;
@@ -15,8 +16,9 @@
 
   --highlight: #EE6B4D;
   --text-color: #323232;
-
+  
   /* End of color variables */
+
   --navbar-height: 60px;
   --header-font-weight: 700;
   --text-decoration: none;
@@ -32,7 +34,6 @@
 }
 
 body {
-  /* font-family: 'Inter', sans-serif; */
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -117,12 +118,12 @@ button:focus,
   column-gap: 40px;
 }
 
-.navigation-list__item {
+.navigation-list-item {
   display: flex;
   margin-left: 15px;
 }
   
-.navigation-list__link {
+.navigation-list-link {
   font-size: 15px;
   color: rgba(255,255,255,0.8);
   text-decoration: none;
@@ -131,7 +132,7 @@ button:focus,
   transition: all 0.3s;
 }
 
-.navigation-list__link:hover {
+.navigation-list-link:hover {
   color: var(--highlight);
 }
 
@@ -148,18 +149,17 @@ button:focus,
   z-index: 1000;
 }
 
-.navbar__content {
+.navbar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* height: var(--navbar-height); */
   min-height: var(--navbar-height);
   padding: 0 30px;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.page-header__logo {
+.page-header-logo {
   height: 30px;
   display: block;
 }
@@ -248,7 +248,7 @@ section:nth-child(even) {
   align-items: center;
 }
 
-.profile__portrait {
+.profile-portrait {
   float: left;
   width: 250px;
   margin-right: 40px;
@@ -261,8 +261,6 @@ section:nth-child(even) {
 }
 
 .about-me {
-  /* margin: var(--margin-body);
-  height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -380,14 +378,6 @@ textarea {
 
 .grid-tech-and-links-item .button {
   width: 100%;
-  /* background: none;
-  border: solid 1px var(--button-color); */
-}
-
-.project-img-wrapper {
-  /* width: auto; */
-  /* margin: 10px 0; */
-
 }
 
 .project-img {
@@ -395,8 +385,6 @@ textarea {
   width: 100%;
   height: auto;
   margin: auto;
-  /* border-radius: 15px; */
-
 }
 
 .project-content {
@@ -407,14 +395,13 @@ textarea {
   padding: 10px 0;
 }
 
-
 .hamburger.fa-bars {
   display: none;
   color: white;
 }
 
 /* start grid fallback */
-.grid__item {
+.grid-item {
   display: inline-block;
   width: 33%;
   color: var(--grid-item-text-color);
@@ -429,13 +416,12 @@ textarea {
     margin: 30px 0;
   }
 
-  .grid__item {
+  .grid-item {
     background-color: var(--grid-item-bg-color);
     background-color: none;
     width: auto;
     min-height: auto;
     margin: 0;
-    /* padding: 20px; */
     border-radius: 15px;
 
     box-shadow: 0 0 2px;
@@ -474,10 +460,8 @@ textarea {
 
 }
 
-
 @media all and (max-width: 749px) {
-
-  .navigation-list__wrapper {
+  .navigation-list-wrapper {
     position: fixed;
     top: 60px;
     left: -100%;
@@ -510,7 +494,7 @@ textarea {
     align-items: center;
   }
 
-  .profile__portrait {
+  .profile-portrait {
     margin-right: 0;
   }
 
@@ -530,7 +514,7 @@ textarea {
     height: auto;
   }
 
-  .grid__item:last-child {
+  .grid-item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
@@ -542,11 +526,7 @@ textarea {
   }
 }
 
-
-
-
-
-/* PROJECT HOVERS */
+/* Hovers on project image */
 .project-description-overlay {
   width: 100%;
   height: 100%;
