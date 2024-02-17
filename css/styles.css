@@ -487,6 +487,11 @@ textarea {
 
   .hamburger.fa-bars {
     display: inline-block;
+    transition: transform 0.2s;
+  }
+
+  .hamburger:hover {
+    transform: scale(1.2);
   }
 
   .profile {
