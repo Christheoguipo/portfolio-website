@@ -1,8 +1,8 @@
-const navLinkElements = document.querySelectorAll('.navigation-list__link');
+const navLinkElements = document.querySelectorAll('.navigation-list-link');
 const sectionElements = document.querySelectorAll('section');
 
 let currentSection = 'home-section';
-const headerHeight = document.querySelector('.navbar__content').offsetHeight;
+const headerHeight = document.querySelector('.navbar-content').offsetHeight;
 
 // Highlight the menu items
 window.addEventListener('scroll', () => {
@@ -26,7 +26,7 @@ window.addEventListener('scroll', () => {
 
 
 const hamburgerElement = document.querySelector('.hamburger');
-const navigationListWrapperElement = document.querySelector('.navigation-list__wrapper');
+const navigationListWrapperElement = document.querySelector('.navigation-list-wrapper');
 
 // Show or Hide the menu list once the Hamburger menu is clicked 
 hamburgerElement.addEventListener('click', () => {
