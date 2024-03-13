@@ -194,8 +194,52 @@ button:focus,
   width: 300px;
 }
 
+<<<<<<< Updated upstream:css/styles.css
 .page-footer {
   clear: both;
+=======
+.fa-arrow-right {
+  transition: all 0.3s;
+}
+
+.btn-to-projects:hover .fa-arrow-right {
+  transform: rotate(90deg);
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.section-title {
+  border-bottom: 3px solid var(--highlight);
+}
+
+section {
+  padding-top: var(--navbar-height);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+section:nth-of-type(odd) {
+  background-color: var(--bg-color-odd);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--bg-color-even);
+  color: white;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#home-section {
+>>>>>>> Stashed changes:src/index.css
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -337,6 +381,7 @@ textarea {
   animation: 4s size-change infinite alternate linear;
 }
 
+<<<<<<< Updated upstream:css/styles.css
 @keyframes size-change {
   from {
     transform-origin: 50% 50%;
@@ -361,6 +406,10 @@ textarea {
   100% {
     fill: var(--blinking-light-on-color);
   }
+=======
+.project-description-overlay:hover, .project-description-overlay:active, .project-description-overlay.touch-triggered  {
+  opacity: 1;
+>>>>>>> Stashed changes:src/index.css
 }
 
 .project-img-wrapper {
