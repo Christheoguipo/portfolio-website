@@ -116,7 +116,7 @@ button:focus,
 }
 
 /* start grid fallback */
-.grid__item {
+.grid-item {
   display: inline-block;
   width: 33%;
 }
@@ -131,7 +131,7 @@ button:focus,
     margin: 0;
   }
 
-  .grid__item {
+  .grid-item {
     background-color: var(--grid-item-bg-color);
     width: auto;
     min-height: auto;
@@ -139,7 +139,7 @@ button:focus,
     padding: 10px 20px;
   }
 
-  .grid__item:last-child {
+  .grid-item:last-child {
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -190,14 +190,10 @@ button:focus,
   text-align: right;
 }
 
-.page-header__logo {
+.page-header-logo {
   width: 300px;
 }
 
-<<<<<<< Updated upstream:css/styles.css
-.page-footer {
-  clear: both;
-=======
 .fa-arrow-right {
   transition: all 0.3s;
 }
@@ -239,7 +235,6 @@ section:nth-of-type(even) {
 }
 
 #home-section {
->>>>>>> Stashed changes:src/index.css
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -253,7 +248,7 @@ section:nth-of-type(even) {
   margin: var(--margin-body);
 }
 
-.profile__portrait {
+.profile-portrait {
   float: left;
   width: 250px;
   margin-right: 40px;
@@ -315,101 +310,8 @@ textarea {
   align-items: center;
 }
 
-.cloud-back {
-  animation-duration: 20s;
-  animation-name: cloud-move-reverse;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-front {
-  animation-duration: 12s;
-  animation-name: cloud-move;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-.sun {
-  /* animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear; */
-
-  /* shorthand of the above code */
-  animation: 4s color-change infinite alternate linear;
-}
-
-@keyframes color-change {
-  0% {
-    fill: var(--sun-morning-color);
-  }
-
-  50% {
-    fill: var(--sun-noon-color);
-  }
-
-  100% {
-    fill: var(--sun-afternoon-color);
-  }
-}
-
-/* .sun-ray {
-  transform-origin: 50% 50%;
-  animation: 4s size-change infinite alternate linear;
-}
-
-<<<<<<< Updated upstream:css/styles.css
-@keyframes size-change {
-  from {
-    transform-origin: 50% 50%;
-    transform: scale(0.5, 0.5);
-  }
-
-  to {
-    transform-origin: 50% 50%;
-    transform: scale(1.2, 1.2);
-  }
-} */
-
-.blinking-light {
-  animation: 1s blink infinite alternate linear;
-}
-
-@keyframes blink {
-  0% {
-    fill: var(--blinking-light-off-color);
-  }
-
-  100% {
-    fill: var(--blinking-light-on-color);
-  }
-=======
 .project-description-overlay:hover, .project-description-overlay:active, .project-description-overlay.touch-triggered  {
   opacity: 1;
->>>>>>> Stashed changes:src/index.css
 }
 
 .project-img-wrapper {
