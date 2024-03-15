@@ -34,7 +34,7 @@ function App() {
   });
 
   const { ref: aboutRef } = useInView({
-    threshold: 0.5,
+    threshold: 0.4,
     onChange: (inView, entry) => {
       if (inView) {
         handleActiveNavLink(entry.target.id);
