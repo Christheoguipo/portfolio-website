@@ -25,7 +25,7 @@ function App() {
   }
 
   const { ref: homeRef } = useInView({
-    threshold: 0.30,
+    threshold: 0.5,
     onChange: (inView, entry) => {
       if (inView) {
         handleActiveNavLink(entry.target.id);
@@ -34,7 +34,7 @@ function App() {
   });
 
   const { ref: aboutRef } = useInView({
-    threshold: 0.30,
+    threshold: 0.5,
     onChange: (inView, entry) => {
       if (inView) {
         handleActiveNavLink(entry.target.id);
@@ -43,7 +43,7 @@ function App() {
   });
 
   const { ref: projectsRef } = useInView({
-    threshold: 0.30,
+    threshold: 0.25,
     onChange: (inView, entry) => {
       if (inView) {
         handleActiveNavLink(entry.target.id);
@@ -52,7 +52,7 @@ function App() {
   });
 
   const { ref: contactRef } = useInView({
-    threshold: 0.30,
+    threshold: 0.5,
     onChange: (inView, entry) => {
       if (inView) {
         handleActiveNavLink(entry.target.id);
