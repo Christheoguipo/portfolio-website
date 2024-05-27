@@ -1,18 +1,26 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLaptopCode, faC, faHashtag, faDownload } from '@fortawesome/free-solid-svg-icons';
-import { faWindows } from '@fortawesome/free-brands-svg-icons';
-import PropTypes from 'prop-types';
+import {
+  faLaptopCode,
+  faC,
+  faHashtag,
+  faDownload,
+} from "@fortawesome/free-solid-svg-icons";
+import { faWindows } from "@fortawesome/free-brands-svg-icons";
+import PropTypes from "prop-types";
 
 function About({ aboutRef }) {
-
   return (
     <section ref={aboutRef} id="about-section">
       <div className="about-me-body container">
         <div className="about-me">
           <div className="about-me-wrapper">
-            <h1 className="section-title" >About</h1>
-            <p> I've been focusing on desktop app development for a while, and now I'm keen to jump into web development, too.
-              I'm all about learning new tech and bringing my software skills to the web. Building awesome stuff is fun!
+            <h1 className="section-title">About</h1>
+            <p>
+              {" "}
+              I've been focusing on desktop app development for a while, and now
+              I'm keen to jump into web development, too. I'm all about learning
+              new tech and bringing my software skills to the web. Building
+              awesome stuff is fun!
             </p>
             <div className="work-exp-grid">
               <div className="work-exp-grid-item">
@@ -29,14 +37,16 @@ function About({ aboutRef }) {
                 <div>Node.js</div>
                 <div>MongoDB</div>
                 <div>...</div>
-
               </div>
               <div className="work-exp-grid-item">
                 <div className="icon-wrapper">
-                  <FontAwesomeIcon icon={faC} size="2xl" /><FontAwesomeIcon icon={faHashtag} size="xl" />
+                  <FontAwesomeIcon icon={faC} size="2xl" />
+                  <FontAwesomeIcon icon={faHashtag} size="xl" />
                 </div>
                 <div className="work-exp-details">
-                  <p className="work-exp-description">5 years in C# desktop app development.</p>
+                  <p className="work-exp-description">
+                    5 years in C# desktop app development.
+                  </p>
                 </div>
                 <p className="highlight">Along with these tools:</p>
                 <div>MS SQL</div>
@@ -49,7 +59,9 @@ function About({ aboutRef }) {
                   <FontAwesomeIcon icon={faWindows} size="2x" />
                 </div>
                 <div className="work-exp-details">
-                  <p className="work-exp-description">2 years in VB.NET desktop app development.</p>
+                  <p className="work-exp-description">
+                    2 years in VB.NET desktop app development.
+                  </p>
                 </div>
                 <p className="highlight">Along with these tools:</p>
                 <div>MS SQL</div>
@@ -61,7 +73,22 @@ function About({ aboutRef }) {
 
           <div className="centered-content">
             <p>Download my Curriculum Vitae for more details.</p>
-            <a href="downloads/cv.pdf" className="button btn-download" download>My CV<FontAwesomeIcon icon={faDownload} /></a>
+            <a
+              href="downloads/CV EN.pdf"
+              className="button btn-download"
+              download
+            >
+              CV EN.pdf
+              <FontAwesomeIcon icon={faDownload} />
+            </a>
+            <a
+              href="downloads/CV DE.pdf"
+              className="button btn-download"
+              download
+            >
+              CV DE.pdf
+              <FontAwesomeIcon icon={faDownload} />
+            </a>
           </div>
         </div>
       </div>
@@ -70,7 +97,7 @@ function About({ aboutRef }) {
 }
 
 About.propTypes = {
-  aboutRef: PropTypes.func
-}
+  aboutRef: PropTypes.func,
+};
 
 export default About;
