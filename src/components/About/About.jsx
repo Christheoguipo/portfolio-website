@@ -14,13 +14,11 @@ function About({ aboutRef }) {
       <div className="about-me-body container">
         <div className="about-me">
           <div className="about-me-wrapper">
-            <h1 className="section-title">About</h1>
-            <p>
-              {" "}
-              I've been focusing on desktop app development for a while, and now
-              I'm keen to jump into web development, too. I'm all about learning
-              new tech and bringing my software skills to the web. Building
-              awesome stuff is fun!
+            <h1 className="section-title">About Me</h1>
+            <p className="about-description">
+              I'm passionate about learning new technologies and expanding my
+              skill set to build impactful and innovative solutions on the web.
+              Turning ideas into awesome creations is what drives me!
             </p>
             <div className="work-exp-grid">
               <div className="work-exp-grid-item">
@@ -36,7 +34,6 @@ function About({ aboutRef }) {
                 <div>Python</div>
                 <div>Node.js</div>
                 <div>MongoDB</div>
-                <div>...</div>
               </div>
               <div className="work-exp-grid-item">
                 <div className="icon-wrapper">
