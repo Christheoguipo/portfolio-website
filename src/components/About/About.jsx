@@ -73,20 +73,8 @@ function About({ aboutRef }) {
 
           <div className="centered-content">
             <p>Download my Curriculum Vitae for more details.</p>
-            <a
-              href="downloads/CV EN.pdf"
-              className="button btn-download"
-              download
-            >
-              CV EN.pdf
-              <FontAwesomeIcon icon={faDownload} />
-            </a>
-            <a
-              href="downloads/CV DE.pdf"
-              className="button btn-download"
-              download
-            >
-              CV DE.pdf
+            <a href="downloads/CV.pdf" className="button btn-download" download>
+              CV.pdf
               <FontAwesomeIcon icon={faDownload} />
             </a>
           </div>
