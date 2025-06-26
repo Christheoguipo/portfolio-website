@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard, faBars, faBusinessTime, faFolderOpen, faHouse, faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./NavBar.css";
 
@@ -49,10 +49,11 @@ function NavBar() {
               onClick={handleLinkClick}
             >
               <div className="navigation-list-item">
-                <img
+                <FontAwesomeIcon className="navigation-list-link-image" icon={faHouse} />
+                {/* <img
                   src="images/home-icon.svg"
                   className="navigation-list-link-image"
-                />
+                /> */}
               </div>
             </a>
 
@@ -63,10 +64,11 @@ function NavBar() {
               onClick={handleLinkClick}
             >
               <div className="navigation-list-item">
-                <img
+                <FontAwesomeIcon className="navigation-list-link-image" icon={faAddressCard} />
+                {/* <img
                   src="images/info-icon.svg"
                   className="navigation-list-link-image"
-                />
+                /> */}
               </div>
             </a>
 
@@ -77,10 +79,11 @@ function NavBar() {
               onClick={handleLinkClick}
             >
               <div className="navigation-list-item">
-                <img
+                <FontAwesomeIcon className="navigation-list-link-image" icon={faWandMagicSparkles} />
+                {/* <img
                   src="images/skills-icon.svg"
                   className="navigation-list-link-image"
-                />
+                /> */}
               </div>
             </a>
 
@@ -91,10 +94,11 @@ function NavBar() {
               onClick={handleLinkClick}
             >
               <div className="navigation-list-item">
-                <img
+                <FontAwesomeIcon className="navigation-list-link-image" icon={faBusinessTime} />
+                {/* <img
                   src="images/portfolio-icon.svg"
                   className="navigation-list-link-image"
-                />
+                /> */}
               </div>
             </a>
 
@@ -105,10 +109,11 @@ function NavBar() {
               onClick={handleLinkClick}
             >
               <div className="navigation-list-item">
-                <img
+                <FontAwesomeIcon className="navigation-list-link-image" icon={faFolderOpen} />
+                {/* <img
                   src="images/work-history-icon.svg"
                   className="navigation-list-link-image"
-                />
+                /> */}
               </div>
             </a>
           </div>
