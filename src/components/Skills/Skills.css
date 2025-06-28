@@ -1,0 +1,9 @@
+#skill-section {
+  height: 100vh;
+  overflow: hidden;
+}
+.bg-img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
