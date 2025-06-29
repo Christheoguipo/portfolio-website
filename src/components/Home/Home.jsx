@@ -16,7 +16,9 @@ function Home({ homeRef }) {
         <img src="images/theo-landscape.webp" className="profile-image" />
         <div className="info">
           <span className="meta">Hello, I am</span>
-          <span className="name">CHRISTHEO <span>GUIPO</span></span>
+          <span className="name">
+            CHRISTHEO <span>GUIPO</span>
+          </span>
           <span className="meta">Software Developer</span>
           <div className="icon-container">
             <FontAwesomeIcon className="icons" icon={faGithub} />
