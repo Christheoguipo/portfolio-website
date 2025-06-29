@@ -67,7 +67,7 @@ function App() {
   });
 
   return (
-    <main className="w-max max-w-10/12 mx-auto">
+    <main className="w-max xl:max-w-10/12 max-w-full mx-auto">
       <NavBar />
       <Home homeRef={homeRef} />
       <About aboutRef={aboutRef} />

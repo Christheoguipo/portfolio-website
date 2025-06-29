@@ -22,13 +22,8 @@ function NavBar() {
   };
 
   return (
-    <div className="navbar">
+    <div className="navbar-container">
       <div className="navbar-content">
-        {/* <img
-            src="images/christheo-guipo-logo.png"
-            className="page-header-logo"
-            alt="My personal logo, a text logo in uppercase letters of my full name"
-          /> */}
         <div className="page-header-logo">
           <img src="images/logo.jpg" className="logo" />
         </div>
@@ -36,14 +31,6 @@ function NavBar() {
           <span>Christheo Guipo</span>
           <span className="subtext">Software Developer</span>
         </div>
-
-        {/* <div>
-          <FontAwesomeIcon
-            onClick={handleHamburgerMenuClick}
-            icon={faBars}
-            className="fa-xl hamburger"
-          />
-        </div> */}
 
         <div
           className={`navigation-list-wrapper ${showMenu ? "navbar-show" : ""}`}
@@ -57,13 +44,9 @@ function NavBar() {
             >
               <div className="navigation-list-item">
                 <FontAwesomeIcon
-                  className="navigation-list-link-image"
+                  className="navigation-list-link-icon"
                   icon={faHouse}
                 />
-                {/* <img
-                  src="images/home-icon.svg"
-                  className="navigation-list-link-image"
-                /> */}
               </div>
             </a>
 
@@ -75,12 +58,12 @@ function NavBar() {
             >
               <div className="navigation-list-item">
                 <FontAwesomeIcon
-                  className="navigation-list-link-image"
+                  className="navigation-list-link-icon"
                   icon={faAddressCard}
                 />
                 {/* <img
                   src="images/info-icon.svg"
-                  className="navigation-list-link-image"
+                  className="navigation-list-link-icon"
                 /> */}
               </div>
             </a>
@@ -93,12 +76,12 @@ function NavBar() {
             >
               <div className="navigation-list-item">
                 <FontAwesomeIcon
-                  className="navigation-list-link-image"
+                  className="navigation-list-link-icon"
                   icon={faWandMagicSparkles}
                 />
                 {/* <img
                   src="images/skills-icon.svg"
-                  className="navigation-list-link-image"
+                  className="navigation-list-link-icon"
                 /> */}
               </div>
             </a>
@@ -111,12 +94,12 @@ function NavBar() {
             >
               <div className="navigation-list-item">
                 <FontAwesomeIcon
-                  className="navigation-list-link-image"
+                  className="navigation-list-link-icon"
                   icon={faBusinessTime}
                 />
                 {/* <img
                   src="images/portfolio-icon.svg"
-                  className="navigation-list-link-image"
+                  className="navigation-list-link-icon"
                 /> */}
               </div>
             </a>
@@ -129,12 +112,12 @@ function NavBar() {
             >
               <div className="navigation-list-item">
                 <FontAwesomeIcon
-                  className="navigation-list-link-image"
+                  className="navigation-list-link-icon"
                   icon={faFolderOpen}
                 />
                 {/* <img
                   src="images/work-history-icon.svg"
-                  className="navigation-list-link-image"
+                  className="navigation-list-link-icon"
                 /> */}
               </div>
             </a>
@@ -147,7 +130,7 @@ function NavBar() {
                 className="navigation-list-link"
                 onClick={handleLinkClick}
               > 
-                <img src="images/home-icon.png" className='navigation-list-link-image' />
+                <img src="images/home-icon.png" className='navigation-list-link-icon' />
               </a>
             </li>
             <li role="presentation" className="navigation-list-item">

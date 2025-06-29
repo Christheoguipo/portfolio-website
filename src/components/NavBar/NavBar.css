@@ -1,4 +1,4 @@
-.navbar {
+.navbar-container {
   background-color: var(--background);
   position: sticky;
   width: 100%;
@@ -10,6 +10,7 @@
   display: grid;
   grid-template-columns: auto 1fr 1fr;
   min-height: var(--navbar-height);
+  width: 100%;
 }
 
 .page-header-logo {
@@ -33,11 +34,12 @@
 .page-header-name {
   display: flex;
   flex-direction: column;
+  font-size: clamp(1rem, 1.3rem, 1.5rem);
 }
 
 .subtext {
   color: var(--text-accent);
-  font-size: 0.8rem;
+  font-size: clamp(0.6rem, 0.8rem, 1rem);
 }
 
 .navigation-list-wrapper {
@@ -68,15 +70,15 @@
   background-color: var(--text-accent);
 }
 
-.navigation-list-item:hover > .navigation-list-link-image {
+.navigation-list-item:hover > .navigation-list-link-icon {
   color: black;
   transform: scale(1.3);
 }
 
-.navigation-list-link-image {
+.navigation-list-link-icon {
   height: auto;
   max-width: 1.2rem;
-  padding: 0 0.8rem;
+  padding: 0 1.2rem;
   color: white;
   transition: all 0.5s;
 }
