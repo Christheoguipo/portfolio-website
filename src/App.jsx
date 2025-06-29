@@ -2,8 +2,6 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
 
 import { useInView } from "react-intersection-observer";
 import Skills from "./components/Skills/Skills";
@@ -69,7 +67,7 @@ function App() {
   });
 
   return (
-    <main className="w-full max-w-10/12 mx-auto">
+    <main className="w-max max-w-10/12 mx-auto">
       <NavBar />
       <Home homeRef={homeRef} />
       <About aboutRef={aboutRef} />
