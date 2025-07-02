@@ -2,23 +2,27 @@ import { useEffect, useState } from "react";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import PropTypes from "prop-types";
 import "./Skills.css";
+import ProgressBarItem from "../common/ProgressBarItem/ProgressBarItem";
+
+const codingSkills = [
+  { text: "C#", percent: 80 },
+  { text: "Vb.Net", percent: 80 },
+  { text: "React", percent: 65 },
+  { text: "NextJs", percent: 70 },
+  { text: "JavaScript", percent: 65 },
+  { text: "Asp.Net Core", percent: 70 },
+];
+
+const dbSkills = [
+  { text: "MSSQL", percent: 80 },
+  { text: "PostgreSQL", percent: 60 },
+  { text: "MongoDB", percent: 65 },
+  { text: "Penpot", percent: 80 },
+  { text: "HTML/CSS", percent: 80 },
+  { text: "TailwindCSS", percent: 70 },
+];
 
 function Skills({ skillsRef }) {
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setValue((prev) => {
-        if (prev >= 80) {
-          clearInterval(timer);
-          return 80;
-        }
-        return prev + 1;
-      });
-    }, 20);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section ref={skillsRef} id="skill-section">
       <div className="img-cover"></div>
@@ -26,35 +30,19 @@ function Skills({ skillsRef }) {
       <div className="skills-grid">
         <div className="skills-title">
           <span className="text-3xl font-bold">My Skills</span>
-          <div className="line"></div>
+          <div className="line-skills"></div>
         </div>
         <div className="skills-coding">
-          <span className="text-xl font-bold">Coding</span>
-          <div style={{ width: "100%" }}>
-            <ProgressBar
-              now={value}
-              label={
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    width: "100%",
-                    padding: "0 8px",
-                    color: "white",
-                    fontWeight: 500,
-                    fontSize: "0.875rem",
-                  }}
-                >
-                  <span>Web Design</span>
-                  <span>{value}%</span>
-                </div>
-              }
-            ></ProgressBar>
-          </div>
+          <span className="block font-bold mb-4">Coding</span>
+          {codingSkills.map((skill, index) => (
+            <ProgressBarItem key={index} skill={skill} />
+          ))}
         </div>
         <div className="skills-database">
-          <span className="text-xl font-bold">Database & Design</span>
+          <span className="block font-bold mb-4">Database & Design</span>
+          {dbSkills.map((skill, index) => (
+            <ProgressBarItem key={index} skill={skill} />
+          ))}
         </div>
       </div>
     </section>

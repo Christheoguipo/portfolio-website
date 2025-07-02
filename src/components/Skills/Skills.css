@@ -4,8 +4,10 @@
   overflow: hidden;
   background-color: #101f4c;
 }
+
 .bg-img {
   max-width: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
   opacity: 70%;
@@ -16,22 +18,22 @@
   z-index: 10;
   width: 100%;
   height: 100%;
+
   left: 0;
   top: 0;
-  background: linear-gradient(
-    to bottom,
-    hsl(225, 65%, 18%, 0%) 0%,
-    #101f4c 70%
-  );
+  background: linear-gradient(to bottom,
+      hsl(225, 65%, 18%, 0%) 0%,
+      #101f4c 70%);
 }
 
 .skills-grid {
   position: absolute;
-  left: 0;
-  top: 0;
   z-index: 20;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 10%;
 
   display: grid;
   grid-template-areas: "title title" "coding database";
@@ -45,20 +47,44 @@
   grid-area: title;
   align-content: end;
   justify-items: center;
-  padding-bottom: 1rem;
   width: 100%;
   letter-spacing: 0.2rem;
 }
 
-.line {
-  width: 80%;
-  height: 0.1rem;
+.line-skills {
+  width: 100%;
+  height: 1px;
+  background-color: var(--white40);
+  margin: 1rem 0;
 }
-n .skills-coding {
+
+.skills-coding {
   grid-area: coding;
   letter-spacing: 0.2rem;
+  max-width: 100%;
+  width: 100%;
+  justify-items: center;
+  padding: 0 3rem;
 }
+
 .skills-database {
   grid-area: database;
   letter-spacing: 0.2rem;
+  max-width: 100%;
+  width: 100%;
+  justify-items: center;
+  padding: 0 3rem;
+}
+
+.progress {
+  width: 100%;
+  margin-bottom: .8rem;
+}
+
+.progressbar-label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8px;
+  letter-spacing: 0px;
 }
