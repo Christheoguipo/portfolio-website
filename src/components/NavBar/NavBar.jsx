@@ -61,15 +61,11 @@ function NavBar() {
                   className="navigation-list-link-icon"
                   icon={faAddressCard}
                 />
-                {/* <img
-                  src="images/info-icon.svg"
-                  className="navigation-list-link-icon"
-                /> */}
               </div>
             </a>
 
             <a
-              href="#projects-section"
+              href="#skill-section"
               role="menuitem"
               className="navigation-list-link"
               onClick={handleLinkClick}
@@ -79,10 +75,6 @@ function NavBar() {
                   className="navigation-list-link-icon"
                   icon={faWandMagicSparkles}
                 />
-                {/* <img
-                  src="images/skills-icon.svg"
-                  className="navigation-list-link-icon"
-                /> */}
               </div>
             </a>
 
@@ -97,10 +89,6 @@ function NavBar() {
                   className="navigation-list-link-icon"
                   icon={faBusinessTime}
                 />
-                {/* <img
-                  src="images/portfolio-icon.svg"
-                  className="navigation-list-link-icon"
-                /> */}
               </div>
             </a>
 
@@ -115,55 +103,9 @@ function NavBar() {
                   className="navigation-list-link-icon"
                   icon={faFolderOpen}
                 />
-                {/* <img
-                  src="images/work-history-icon.svg"
-                  className="navigation-list-link-icon"
-                /> */}
               </div>
             </a>
           </div>
-          {/* <ul role="menubar" className="navigation-list">
-            <li role="presentation" className="navigation-list-item">
-              <a
-                href="#home-section"
-                role="menuitem"
-                className="navigation-list-link"
-                onClick={handleLinkClick}
-              > 
-                <img src="images/home-icon.png" className='navigation-list-link-icon' />
-              </a>
-            </li>
-            <li role="presentation" className="navigation-list-item">
-              <a
-                href="#about-section"
-                role="menuitem"
-                className="navigation-list-link"
-                onClick={handleLinkClick}
-              >
-                About
-              </a>
-            </li>
-            <li role="presentation" className="navigation-list-item">
-              <a
-                href="#projects-section"
-                role="menuitem"
-                className="navigation-list-link"
-                onClick={handleLinkClick}
-              >
-                Projects
-              </a>
-            </li>
-            <li role="presentation" className="navigation-list-item">
-              <a
-                href="#contact-section"
-                role="menuitem"
-                className="navigation-list-link"
-                onClick={handleLinkClick}
-              >
-                Contact
-              </a>
-            </li>
-          </ul> */}
         </div>
       </div>
     </div>
