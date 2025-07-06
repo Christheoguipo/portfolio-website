@@ -13,9 +13,14 @@
   --white90: hsl(0, 0%, 100%, 90%);
   --background: hsl(0, 0%, 0%);
   --primary: hsl(217, 83%, 73%);
-  --primary20: hsl(217, 83%, 73%, 20%);
+  --primary20: hsla(353, 83%, 73%, 0.2);
   --primary30: hsl(217, 83%, 73%, 30%);
-  --secondary: hsl(207, 100%, 94%);
+  --blue: #1b3179;
+  --blue5: hsl(226, 64%, 29%, 5%);
+  --blue10: hsl(226, 64%, 29%, 10%);
+  --blue20: hsl(226, 64%, 29%, 20%);
+
+  --secondary: #40535a;
   --secondary20: hsl(207, 100%, 94%, 60%);
   --accent: #2b7440;
   --accent80: hsl(16, 18%, 52%);
@@ -82,11 +87,11 @@ html {
 html {
   scroll-behavior: smooth;
 }
-
+/* 
 h1 {
   font-size: 30px;
   font-weight: var(--header-font-weight);
-}
+} */
 
 h2 {
   font-size: 24px;
@@ -111,8 +116,9 @@ h4 {
   transition: all 0.3s;
 }
 
-.profile-text:hover>.moving-line::before {
-  animation: 0.4s cubic-bezier(0.6, 0.01, 0, 1) 0s 1 normal forwards running ts-link-arrow-effect-animation-in;
+.profile-text:hover > .moving-line::before {
+  animation: 0.4s cubic-bezier(0.6, 0.01, 0, 1) 0s 1 normal forwards running
+    ts-link-arrow-effect-animation-in;
 }
 
 .moving-line::before {
@@ -155,7 +161,7 @@ h4 {
   overflow: hidden;
 }
 
-.profile-text:hover>.moving-line span {
+.profile-text:hover > .moving-line span {
   transform: translateX(0);
 }
 
@@ -217,10 +223,10 @@ ul {
   list-style: none;
 }
 
-.container {
+/* .container {
   max-width: 1280px;
   margin: 0 auto;
-}
+} */
 
 /* #home-section {
   display: flex;
@@ -245,20 +251,20 @@ ul {
   color: var(--highlight);
 } */
 
-.profile-intro:hover>.icon-container .moving-icons {
+.profile-intro:hover > .icon-container .moving-icons {
   opacity: 1;
   transform: translateY(-80px);
 }
 
-.profile-intro:hover>.icon-container .moving-icons:nth-child(1) {
+.profile-intro:hover > .icon-container .moving-icons:nth-child(1) {
   transition-delay: 0.1s;
 }
 
-.profile-intro:hover>.icon-container .moving-icons:nth-child(2) {
+.profile-intro:hover > .icon-container .moving-icons:nth-child(2) {
   transition-delay: 0.2s;
 }
 
-.profile-intro:hover>.icon-container .moving-icons:nth-child(3) {
+.profile-intro:hover > .icon-container .moving-icons:nth-child(3) {
   transition-delay: 0.3s;
 }
 
@@ -443,9 +449,9 @@ textarea {
 }
 
 @media all and (max-width: 670px) {
-  h1 {
+  /* h1 {
     font-size: 24px;
-  }
+  } */
 
   h2 {
     font-size: 22px;

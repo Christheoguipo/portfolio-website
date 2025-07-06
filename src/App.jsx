@@ -5,6 +5,7 @@ import About from "./components/About/About";
 
 import { useInView } from "react-intersection-observer";
 import Skills from "./components/Skills/Skills";
+import Experience from "./components/Experience/Experience";
 
 function App() {
   const navLinkElements = document.querySelectorAll(".navigation-list-link");
@@ -48,8 +49,8 @@ function App() {
     },
   });
 
-  const { ref: projectsRef } = useInView({
-    threshold: 0.25,
+  const { ref: experienceRef } = useInView({
+    threshold: 0.5,
     onChange: (inView, entry) => {
       if (inView) {
         handleActiveNavLink(entry.target.id);
@@ -57,8 +58,8 @@ function App() {
     },
   });
 
-  const { ref: contactRef } = useInView({
-    threshold: 0.5,
+  const { ref: projectsRef } = useInView({
+    threshold: 0.25,
     onChange: (inView, entry) => {
       if (inView) {
         handleActiveNavLink(entry.target.id);
@@ -72,6 +73,7 @@ function App() {
       <Home homeRef={homeRef} />
       <About aboutRef={aboutRef} />
       <Skills skillsRef={skillsRef} />
+      <Experience experienceRef={experienceRef} />
     </main>
   );
 }

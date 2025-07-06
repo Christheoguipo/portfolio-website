@@ -32,13 +32,13 @@ function Skills({ skillsRef }) {
           <span className="text-3xl font-bold">My Skills</span>
           <div className="line-skills"></div>
         </div>
-        <div className="skills-coding">
+        <div className="skills skills-coding">
           <span className="block font-bold mb-4">Coding</span>
           {codingSkills.map((skill, index) => (
             <ProgressBarItem key={index} skill={skill} />
           ))}
         </div>
-        <div className="skills-database">
+        <div className="skills skills-database">
           <span className="block font-bold mb-4">Database & Design</span>
           {dbSkills.map((skill, index) => (
             <ProgressBarItem key={index} skill={skill} />

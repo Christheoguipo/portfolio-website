@@ -21,9 +21,11 @@
 
   left: 0;
   top: 0;
-  background: linear-gradient(to bottom,
-      hsl(225, 65%, 18%, 0%) 0%,
-      #101f4c 70%);
+  background: linear-gradient(
+    to bottom,
+    hsl(225, 65%, 18%, 0%) 0%,
+    #101f4c 70%
+  );
 }
 
 .skills-grid {
@@ -48,7 +50,6 @@
   align-content: end;
   justify-items: center;
   width: 100%;
-  letter-spacing: 0.2rem;
 }
 
 .line-skills {
@@ -58,27 +59,24 @@
   margin: 1rem 0;
 }
 
-.skills-coding {
-  grid-area: coding;
+.skills {
   letter-spacing: 0.2rem;
   max-width: 100%;
-  width: 100%;
+  width: 70%;
   justify-items: center;
-  padding: 0 3rem;
+}
+
+.skills-coding {
+  grid-area: coding;
 }
 
 .skills-database {
   grid-area: database;
-  letter-spacing: 0.2rem;
-  max-width: 100%;
-  width: 100%;
-  justify-items: center;
-  padding: 0 3rem;
 }
 
 .progress {
   width: 100%;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 .progressbar-label {
