@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import { useInView } from "react-intersection-observer";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
   const navLinkElements = document.querySelectorAll(".navigation-list-link");
@@ -58,7 +59,7 @@ function App() {
     },
   });
 
-  const { ref: projectsRef } = useInView({
+  const { ref: portfolioRef } = useInView({
     threshold: 0.25,
     onChange: (inView, entry) => {
       if (inView) {
@@ -74,6 +75,7 @@ function App() {
       <About aboutRef={aboutRef} />
       <Skills skillsRef={skillsRef} />
       <Experience experienceRef={experienceRef} />
+      <Portfolio portfolioRef={portfolioRef} />
     </main>
   );
 }
