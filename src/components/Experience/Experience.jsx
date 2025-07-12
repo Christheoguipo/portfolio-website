@@ -10,119 +10,114 @@ import {
   faBriefcase,
   faGraduationCap,
   faRocket,
+  faPlaneDeparture
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Experience() {
+const experience = [{
+  date: "Jan 2025 - Present",
+  title: "Software Developer",
+  company: "FuturePoint IT Solutions (Unpaid collaboration)",
+  task: "Working on an internal employee portal with Next.js, where staff can track dashboards, apply for leave and manage their records.",
+  skills: ["Next.js", "MSSQL", "React", "HTML", "TailwindCSS"],
+  isWorkExperience: true,
+  icon: faBriefcase
+},
+{
+  date: "Sep 2020 - Dec 2024",
+  title: "Relocation, Integration and Training",
+  company: "Berlin, Germany",
+  task: "Relocated to Germany, completed a full-stack web dev program and deepened my skills in modern tools like React, Node.js, C# and ASP.NET Core through hands-on courses and projects.",
+  skills: ["C#", "ASP.NET Core", "JavaScript", "React", "Node.js", "Python", "Angular"],
+  isWorkExperience: false,
+  icon: faPlaneDeparture
+},
+{
+  date: "Aug 2015 - Aug 2020",
+  title: "Software Developer",
+  company: "Brigada Mass Media Corporation",
+  task: "Built and supported an in-house system in C# and SQL that helped 47+ branches manage sales, inventory and collections more efficiently.",
+  skills: ["C#", "WinForms", "MSSQL", "TFS", "Crystal Report"],
+  isWorkExperience: true,
+  icon: faBriefcase
+},
+{
+  date: "Sep 2013 - Jul 2015",
+  title: "Software Developer",
+  company: "ICEG Systems Inc.",
+  task: "Built and maintained Accounting, HR and Payroll system modules using VB.NET, DevExpress and SQL, while supporting users through training.",
+  skills: ["VB.Net", "WinForms", "MSSQL", "DevExpress"],
+  isWorkExperience: true,
+  icon: faBriefcase
+},
+{
+  date: "Oct 2012 - Aug 2013",
+  title: "Software Developer",
+  company: "Dole Philippines Inc.",
+  task: "Developed and tested production system modules in ILE RPG and helped users get comfortable with the new tools through training.",
+  skills: ["ILE RPG", "AS400"],
+  isWorkExperience: true,
+  icon: faBriefcase
+},
+{
+  date: "Jul 2011 - Sep 2012",
+  title: "Data Center Operator",
+  company: "Dole Philippines Inc.",
+  task: "Handled basic user support, monitored servers and performed regular backups and updates to keep systems running smoothly.",
+  skills: ["Server Monitoring", "Backup", "Basic IT Support", "AS400", "DB2"],
+  isWorkExperience: true,
+  icon: faBriefcase
+},
+{
+  date: "Jun 2007 - Mar 2011",
+  title: "Bachelor of Science in Computer Science",
+  company: "Notre Dame of Dadiangas University, Philippines",
+  task: "",
+  skills: ["SDLC", "Turbo Pascal", "VB"],
+  isWorkExperience: false,
+  icon: faGraduationCap
+},
+]
+
+function Experience({ experienceRef }) {
   return (
-    <section id="experience-section">
+    <section ref={experienceRef} id="experience-section">
       <div className="experience-container">
         <span className="text-3xl font-bold text-black my-4 block">
           My Work Experience and Education
         </span>
         <VerticalTimeline lineColor="var(--secondary)">
-          <VerticalTimelineElement
-            className="vertical-timeline-element"
-            contentStyle={{
-              backgroundColor: "var(--blue10)",
-              color: "#000",
-            }}
-            contentArrowStyle={{ borderRight: "7px solid  var(--blue10)" }}
-            date="January 2025 - present"
-            iconStyle={{
-              background: "var(--accent)",
-              color: "var(--text)",
-            }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <span className="vertical-timeline-element-title">
-              Software Developer
-            </span>
-            <span className="vertical-timeline-element-subtitle">
-              FuturePoint IT Solutions (Unpaid collaboration)
-            </span>
-            <span className="timeline-text">
-              Working on an internal employee portal with Next.js, where staff
-              can track dashboards, apply for leave and manage their records.
-            </span>
-            <div>
-              <div className="tech-skill">Next.js</div>
-              <div className="tech-skill">MSSQL</div>
-              <div className="tech-skill">React</div>
-              <div className="tech-skill">HTML</div>
-              <div className="tech-skill">TailwindCSS</div>
-            </div>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element"
-            contentStyle={{
-              backgroundColor: "var(--blue10)",
-              color: "#000",
-            }}
-            contentArrowStyle={{ borderRight: "7px solid  var(--blue10)" }}
-            date="Sep 2024 - Dec 2024"
-            iconStyle={{
-              background: "var(--blue)",
-              color: "var(--text)",
-            }}
-            icon={<FontAwesomeIcon icon={faGraduationCap} />}
-          >
-            <span className="vertical-timeline-element-title">
-              Building Apps with .NET Core and React
-            </span>
-            <span className="vertical-timeline-element-subtitle">
-              Udemy, Neil Cummings
-            </span>
-            <span className="timeline-text">
-              Completed a full-stack project course on building a web app with
-              ASP.NET Core and React. Gained more hands-on experience with API
-              development, Entity Framework and modern React features.
-            </span>
-            <div>
-              <div className="tech-skill">C#</div>
-              <div className="tech-skill">ASP.Net Core</div>
-              <div className="tech-skill">Entity Framework</div>
-              <div className="tech-skill">SQLite</div>
-              <div className="tech-skill">React</div>
-              <div className="tech-skill">HTML</div>
-              <div className="tech-skill">TailwindCSS</div>
-            </div>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element"
-            contentStyle={{
-              backgroundColor: "var(--blue10)",
-              color: "#000",
-            }}
-            contentArrowStyle={{ borderRight: "7px solid  var(--blue10)" }}
-            date="Jul 2023 - Dec 2023"
-            iconStyle={{
-              background: "var(--blue)",
-              color: "var(--text)",
-            }}
-            icon={<FontAwesomeIcon icon={faGraduationCap} />}
-          >
-            <span className="vertical-timeline-element-title">
-              Full-Stack Web Development Program
-            </span>
-            <span className="vertical-timeline-element-subtitle">
-              CareerFoundry
-            </span>
-            <span className="timeline-text">
-              Completed a full-stack web development program at CareerFoundry,
-              covering JavaScript, React, Node.js and MongoDB. Built multiple
-              projects from scratch, focusing on clean architecture, REST APIs
-              and responsive design.
-            </span>
-            <div>
-              <div className="tech-skill">JavaScript</div>
-              <div className="tech-skill">React</div>
-              <div className="tech-skill">Node.js</div>
-              <div className="tech-skill">MongoDB</div>
-              <div className="tech-skill">HTML</div>
-              <div className="tech-skill">CSS</div>
-            </div>
-          </VerticalTimelineElement>
+          {experience && experience.map((exp) => (
+            <VerticalTimelineElement
+              className="vertical-timeline-element"
+              contentStyle={{
+                backgroundColor: "var(--blue10)",
+                color: "#000",
+              }}
+              contentArrowStyle={{ borderRight: "7px solid  var(--blue10)" }}
+              date={exp.date}
+              iconStyle={{
+                background: exp.isWorkExperience ? "var(--accent)" : "var(--blue)",
+                color: "var(--text)",
+              }}
+              icon={<FontAwesomeIcon icon={exp.icon} />}
+            >
+              <span className="vertical-timeline-element-title">
+                {exp.title}
+              </span>
+              <span className="vertical-timeline-element-subtitle">
+                {exp.company}
+              </span>
+              <span className="timeline-text">
+                {exp.task}
+              </span>
+              <div>
+                {exp.skills && exp.skills.map((skill) => (
+                  <div className="tech-skill">{skill}</div>
+                ))}
+              </div>
+            </VerticalTimelineElement>
+          ))}
 
           <VerticalTimelineElement
             iconStyle={{

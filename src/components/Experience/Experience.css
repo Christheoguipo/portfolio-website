@@ -1,7 +1,7 @@
 .experience-container {
   height: 100%;
   background-color: rgb(224, 224, 224);
-  padding: 4rem;
+  padding: 2rem 0;
   justify-content: center;
   justify-items: center;
 }
@@ -14,15 +14,15 @@
   font-size: 1rem;
 }
 
-.vertical-timeline-element-content:hover
-  > .vertical-timeline-element-title::after {
+.vertical-timeline-element-content:hover>.vertical-timeline-element-title::after {
   height: 50%;
+  background-color: var(--accent);
 }
 
 .vertical-timeline-element-title {
   z-index: 0;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.1rem, 1.3rem);
   position: relative;
   display: inline-block;
   transition: all 0.3s;
@@ -36,8 +36,9 @@
   left: 0;
   content: "";
   opacity: 0.5;
-  background-color: var(--text-accent);
-  width: 105%;
+  background-color: var(--blue);
+  /* background-color: var(--text-accent); */
+  width: calc(100% + .5rem)  ;
   height: 0.2rem;
   transition: all 0.3s;
 }

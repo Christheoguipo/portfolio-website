@@ -13,7 +13,7 @@ function Home({ homeRef }) {
       <div className="profile">
         <div className="profile-image-cover"></div>
         {/* <img src="images/profile-portrait.jpg" className="profile-image" /> */}
-        <img src="images/theo-landscape.webp" className="profile-image" />
+        <img src="images/theo-landscape.jpg" className="profile-image" />
         <div className="info">
           <span className="meta">Hello, I am</span>
           <span className="name">

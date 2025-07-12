@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAddressCard,
-  faBars,
   faBusinessTime,
   faFolderOpen,
   faHouse,
@@ -79,7 +78,7 @@ function NavBar() {
             </a>
 
             <a
-              href="#projects-section"
+              href="#experience-section"
               role="menuitem"
               className="navigation-list-link"
               onClick={handleLinkClick}
@@ -93,7 +92,7 @@ function NavBar() {
             </a>
 
             <a
-              href="#contact-section"
+              href="#portfolio-section"
               role="menuitem"
               className="navigation-list-link"
               onClick={handleLinkClick}

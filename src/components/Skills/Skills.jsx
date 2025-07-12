@@ -26,7 +26,7 @@ function Skills({ skillsRef }) {
   return (
     <section ref={skillsRef} id="skill-section">
       <div className="img-cover"></div>
-      <img className="bg-img" src="./images/laptop.jpg" />
+      <img className="bg-img" src="./images/laptop.webp" />
       <div className="skills-grid">
         <div className="skills-title">
           <span className="text-3xl font-bold">My Skills</span>

@@ -21,11 +21,9 @@
 
   left: 0;
   top: 0;
-  background: linear-gradient(
-    to bottom,
-    hsl(225, 65%, 18%, 0%) 0%,
-    #101f4c 70%
-  );
+  background: linear-gradient(to bottom,
+      hsl(225, 65%, 18%, 0%) 0%,
+      #101f4c 70%);
 }
 
 .skills-grid {
@@ -47,8 +45,8 @@
 
 .skills-title {
   grid-area: title;
+  text-align: center;
   align-content: end;
-  justify-items: center;
   width: 100%;
 }
 
