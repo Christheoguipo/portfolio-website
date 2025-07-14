@@ -21,9 +21,16 @@
 
   left: 0;
   top: 0;
-  background: linear-gradient(to bottom,
-      hsl(225, 65%, 18%, 0%) 0%,
-      #101f4c 70%);
+  background: linear-gradient(
+    to bottom,
+    hsl(225, 65%, 18%, 0%) 0%,
+    #152964 70%
+  );
+  /* background: linear-gradient(
+    to bottom,
+    hsl(225, 65%, 18%, 0%) 0%,
+    #101f4c 70%
+  ); */
 }
 
 .skills-grid {

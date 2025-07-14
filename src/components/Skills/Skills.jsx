@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import ProgressBar from "react-bootstrap/ProgressBar";
 import PropTypes from "prop-types";
 import "./Skills.css";
 import ProgressBarItem from "../common/ProgressBarItem/ProgressBarItem";
@@ -29,7 +27,7 @@ function Skills({ skillsRef }) {
       <img className="bg-img" src="./images/laptop.webp" />
       <div className="skills-grid">
         <div className="skills-title">
-          <span className="text-3xl font-bold">My Skills</span>
+          <span className="text-3xl font-bold">Skills</span>
           <div className="line-skills"></div>
         </div>
         <div className="skills skills-coding">
