@@ -4,10 +4,11 @@ import "./About.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import Carousel from "../common/Carousel/Carousel";
+import Logo from "../common/Logo/Logo";
 
 function About({ aboutRef }) {
   return (
-    <section ref={aboutRef} id="about-section">
+    <section ref={aboutRef} id="about">
       <div className="about-me-text-container">
         <p className="about-me-text-title">
           Turning ideas into code that matters.
@@ -32,10 +33,8 @@ function About({ aboutRef }) {
       <div className="line"></div>
 
       <div className="about-me-logo-container">
-        <div className="button">Download CV</div>
-        <div className="about-me-logo">
-          <img src="images/logo.jpg" className="logo" />
-        </div>
+        <a className="button" target="_blank" href="/downloads/CV.pdf" rel="noopener noreferrer" title="CV.pdf" >Download CV</a>
+        <Logo size="md" />
         <Carousel />
       </div>
     </section>
@@ -43,7 +42,7 @@ function About({ aboutRef }) {
 }
 
 About.propTypes = {
-  aboutRef: PropTypes.func,
+  aboutRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
 
 export default About;

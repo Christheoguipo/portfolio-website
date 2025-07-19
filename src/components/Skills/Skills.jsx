@@ -22,7 +22,7 @@ const dbSkills = [
 
 function Skills({ skillsRef }) {
   return (
-    <section ref={skillsRef} id="skill-section">
+    <section ref={skillsRef} id="skill">
       <div className="img-cover"></div>
       <img className="bg-img" src="./images/laptop.webp" />
       <div className="skills-grid">
@@ -48,7 +48,7 @@ function Skills({ skillsRef }) {
 }
 
 Skills.propTypes = {
-  skillsRef: PropTypes.func,
+  skillsRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
 
 export default Skills;

@@ -8,102 +8,103 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./NavBar.css";
+import Logo from "../common/Logo/Logo";
+import NavListItem from "./NavListItem";
 
-function NavBar() {
+
+function NavBar({ sections }) {
+
+  const { homeRef, aboutRef, skillsRef, experienceRef, portfolioRef } = sections;
+
   const [showMenu, setShowMenu] = useState(false);
+
+  const navItemData = [
+    {
+      icon: faHouse,
+      ref: homeRef
+    },
+    {
+      icon: faAddressCard,
+      ref: aboutRef
+    },
+    {
+      icon: faWandMagicSparkles,
+      ref: skillsRef
+    },
+    {
+      icon: faBusinessTime,
+      ref: experienceRef
+    },
+    {
+      icon: faFolderOpen,
+      ref: portfolioRef
+    },
+
+  ];
 
   const handleHamburgerMenuClick = () => {
     setShowMenu(!showMenu);
   };
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (ref) => {
     setShowMenu(false);
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className="navbar-container">
-      <div className="navbar-content">
-        <div className="page-header-logo">
-          <img src="images/logo.jpg" className="logo" />
-        </div>
-        <div className="page-header-name">
+    <div className="bg-[var(--background)] sticky w-full top-0 z-100">
+      <div className="grid grid-cols-[auto_1fr_1fr] min-h-[var(--navbar-height)] w-full">
+        <Logo size="sm" />
+        <div className="flex flex-col text-[clamp(1rem,1.3rem,1.5rem)]">
           <span>Christheo Guipo</span>
-          <span className="subtext">Software Developer</span>
+          <span className="text-[var(--text-accent)] text-[clamp(0.6rem,0.8rem,1rem)]">Software Developer</span>
         </div>
 
         <div
-          className={`navigation-list-wrapper ${showMenu ? "navbar-show" : ""}`}
+          className={`h-full ${showMenu ? "left-0 translate-x-0" : ""}`}
         >
-          <div className="navigation-list">
-            <a
-              href="#home-section"
-              role="menuitem"
-              className="navigation-list-link"
-              onClick={handleLinkClick}
-            >
-              <div className="navigation-list-item">
-                <FontAwesomeIcon
-                  className="navigation-list-link-icon"
-                  icon={faHouse}
-                />
-              </div>
-            </a>
 
-            <a
-              href="#about-section"
-              role="menuitem"
-              className="navigation-list-link"
-              onClick={handleLinkClick}
-            >
-              <div className="navigation-list-item">
-                <FontAwesomeIcon
-                  className="navigation-list-link-icon"
-                  icon={faAddressCard}
-                />
-              </div>
-            </a>
+          <div className="flex items-center justify-end h-full">
 
-            <a
-              href="#skill-section"
-              role="menuitem"
-              className="navigation-list-link"
-              onClick={handleLinkClick}
-            >
-              <div className="navigation-list-item">
-                <FontAwesomeIcon
-                  className="navigation-list-link-icon"
-                  icon={faWandMagicSparkles}
-                />
-              </div>
-            </a>
+            {navItemData && navItemData.map((item, index) => (
+              <NavListItem key={index} icon={item.icon} handleClick={() => handleLinkClick(item.ref)} />
+            )
+            )}
 
-            <a
-              href="#experience-section"
-              role="menuitem"
-              className="navigation-list-link"
-              onClick={handleLinkClick}
-            >
-              <div className="navigation-list-item">
-                <FontAwesomeIcon
-                  className="navigation-list-link-icon"
-                  icon={faBusinessTime}
-                />
-              </div>
-            </a>
+            {/* <div className="navigation-list-item" onClick={() => handleLinkClick(homeRef)}>
+              <FontAwesomeIcon
+                className="navigation-list-link-icon"
+                icon={faHouse}
+              />
+            </div>
 
-            <a
-              href="#portfolio-section"
-              role="menuitem"
-              className="navigation-list-link"
-              onClick={handleLinkClick}
-            >
-              <div className="navigation-list-item">
-                <FontAwesomeIcon
-                  className="navigation-list-link-icon"
-                  icon={faFolderOpen}
-                />
-              </div>
-            </a>
+            <div className="navigation-list-item" onClick={() => handleLinkClick(aboutRef)}>
+              <FontAwesomeIcon
+                className="navigation-list-link-icon"
+                icon={faAddressCard}
+              />
+            </div> */}
+            {/* 
+            <div className="navigation-list-item" onClick={() => handleLinkClick(skillsRef)}>
+              <FontAwesomeIcon
+                className="navigation-list-link-icon"
+                icon={faWandMagicSparkles}
+              />
+            </div>
+
+            <div className="navigation-list-item" onClick={() => handleLinkClick(experienceRef)}>
+              <FontAwesomeIcon
+                className="navigation-list-link-icon"
+                icon={faBusinessTime}
+              />
+            </div>
+
+            <div className="navigation-list-item" onClick={() => handleLinkClick(portfolioRef)}>
+              <FontAwesomeIcon
+                className="navigation-list-link-icon"
+                icon={faFolderOpen}
+              />
+            </div> */}
           </div>
         </div>
       </div>

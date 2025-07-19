@@ -90,7 +90,7 @@ const experience = [
 
 function Experience({ experienceRef }) {
   return (
-    <section ref={experienceRef} id="experience-section">
+    <section ref={experienceRef} id="experience">
       <div className="experience-container">
         <span className="text-3xl font-bold text-black my-4 block">
           Experience and Education
@@ -147,7 +147,7 @@ function Experience({ experienceRef }) {
 }
 
 Experience.propTypes = {
-  experienceRef: PropTypes.func,
+  experienceRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
 
 export default Experience;

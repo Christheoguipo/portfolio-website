@@ -1,16 +1,11 @@
-#home-section {
-  /* display: grid;
-  grid-template-rows: 10fr 1fr; */
-}
-
-.profile {
+/* .profile {
   width: 100%;
   height: calc(90dvh - 7rem);
   overflow: hidden;
   position: relative;
-}
+} */
 
-.profile-image-cover {
+/* .profile-image-cover {
   background: linear-gradient(to right,
       rgba(0, 0, 0, 0.8) 0%,
       rgba(0, 0, 0, 0.8) 30%,
@@ -20,16 +15,16 @@
   height: 100%;
   top: 0;
   left: 0;
-}
+} */
 
-.profile-image {
+/* .profile-image {  
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   box-shadow: inset 0px 0px 20px 20px #000000e6;
-}
-
+} */
+/* 
 .info {
   position: absolute;
   display: flex;
@@ -37,16 +32,15 @@
   top: 20%;
   flex-direction: column;
   justify-content: center;
-}
-
+} */
+/* 
 .info>span {
   color: var(--white80);
   font-weight: 400;
-}
+} */
 
-.meta {
+/* .meta {
   font-size: 2rem;
-  /* padding: 1rem 0; */
 }
 
 .name {
@@ -58,15 +52,13 @@
 }
 
 .name>span {
-  /* color: green; */
-  /* color: linear-gradient(to bottom, rgba(27, 49, 121, 1) 0%,rgba(47, 249, 107, 1) 100%); */
   background: linear-gradient(to right,
       rgb(27, 49, 121) 0%,
       rgb(47, 249, 107) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-}
+} */
 
 .profile-box {
   overflow: hidden;
@@ -152,6 +144,7 @@
 }
 
 .icons {
+  color: var(--text);
   transition: all 0.2s;
   cursor: pointer;
   height: 1.5rem;

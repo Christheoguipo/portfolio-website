@@ -11,7 +11,7 @@ import "./About.css";
 
 function About({ aboutRef }) {
   return (
-    <section ref={aboutRef} id="about-section">
+    <section ref={aboutRef} id="about">
       <div className="about-me-text-container">
         <p className="about-me-text">
           I'm a passionate software developer with a focus on building clean,
