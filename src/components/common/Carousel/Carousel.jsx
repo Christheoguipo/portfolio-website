@@ -19,7 +19,7 @@ function Carousel() {
         clickable: true,
       }}
       autoplay={{
-        delay: 2500,
+        delay: 2500,q 
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Pagination]}

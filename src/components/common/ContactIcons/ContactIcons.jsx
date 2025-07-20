@@ -5,21 +5,42 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons/faWhatsapp";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function ContactIcons() {
-
-    return (
-        <div className="flex gap-4 pt-4">
-            <a target="_blank" href="https://github.com/Christheoguipo" rel="noopener noreferrer">
-                <FontAwesomeIcon className="icons" icon={faGithub} />
-            </a>
-            <a target="_blank" href="https://www.linkedin.com/in/christheoguipo/" rel="noopener noreferrer">
-                <FontAwesomeIcon className="icons" icon={faLinkedinIn} />
-            </a>
-            <a target="_blank" href="mailto:christheo.guipo@gmail.com?subject=Let's%20Connect" rel="noopener noreferrer" title="christheo.guipo@gmail.com">
-                <FontAwesomeIcon className="icons" icon={faEnvelope} />
-            </a>
-            {/* <FontAwesomeIcon className="icons" icon={faWhatsapp} /> */}
-        </div>
-    );
+  return (
+    <div className="flex gap-4 pt-4">
+      <a
+        target="_blank"
+        href="https://github.com/Christheoguipo"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon
+          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-2xl hover:text-[var(--text-accent)] hover:scale-125"
+          icon={faGithub}
+        />
+      </a>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/christheoguipo/"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon
+          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-2xl hover:text-[var(--text-accent)] hover:scale-125"
+          icon={faLinkedinIn}
+        />
+      </a>
+      <a
+        target="_blank"
+        href="mailto:christheo.guipo@gmail.com?subject=Let's%20Connect"
+        rel="noopener noreferrer"
+        title="christheo.guipo@gmail.com"
+      >
+        <FontAwesomeIcon
+          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-2xl hover:text-[var(--text-accent)] hover:scale-125"
+          icon={faEnvelope}
+        />
+      </a>
+      {/* <FontAwesomeIcon className="icons" icon={faWhatsapp} /> */}
+    </div>
+  );
 }
 
 export default ContactIcons;

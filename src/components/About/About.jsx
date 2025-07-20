@@ -8,32 +8,37 @@ import Logo from "../common/Logo/Logo";
 
 function About({ aboutRef }) {
   return (
-    <section ref={aboutRef} id="about">
-      <div className="about-me-text-container">
-        <p className="about-me-text-title">
-          Turning ideas into code that matters.
-        </p>
-        <p className="about-me-text-body">
+    <section
+      ref={aboutRef}
+      id="about"
+      className="flex flex-col items-center h-full gap-y-4 py-20 bg-[var(--background)]"
+    >
+      {/* <div className="flex w-[80%] p-8 gap-16"> */}
+      <div className="w-[80%] p-8">
+        <p className="italic font-bold text-3xl">Why me?</p>
+        <p>
           I'm a dedicated software developer who values simplicity and
           performance. I build solutions with long-term maintainability in mind,
           always aiming to make both people and systems work better together.
-          {/* <span>
-            With a background in full-stack development, I’ve worked on
-            everything from responsive user interfaces to robust backend APIs. I
-            enjoy learning new tools and frameworks, but I’m most passionate
-            about writing clean, understandable code that solves real problems.
-          </span> */}
-          <span>
-            Whether collaborating in a team or working independently, I bring a
-            thoughtful, detail-oriented approach to every project I take on.
+          <span className="block pt-4">
+            Whether on a team or working independently, I bring a thoughtful,
+            detail-oriented approach to every project I take on.
           </span>
         </p>
       </div>
 
-      <div className="line"></div>
+      <div className="w-[80%] h-[1px] bg-[var(--white40)] mt-4 mb-16"></div>
 
-      <div className="about-me-logo-container">
-        <a className="button" target="_blank" href="/downloads/CV.pdf" rel="noopener noreferrer" title="CV.pdf" >Download CV</a>
+      <div className="grid grid-cols-3 bg-[var(--white10)] justify-items-center items-center h-28 w-[80%]">
+        <a
+          className="!no-underline content-center text-center w-48 h-12 bg-[var(--background)] !text-[var(--text)] shadow-[0px_0px_25px_rgba(0,0,0,0.5)] rounded-[10px] transition-all duration-200 hover:cursor-pointer hover:translate-y-[-5px] hover:shadow-[0px_0px_25px_var(--text-accent)]"
+          target="_blank"
+          href="/downloads/CV.pdf"
+          rel="noopener noreferrer"
+          title="CV.pdf"
+        >
+          Download CV
+        </a>
         <Logo size="md" />
         <Carousel />
       </div>

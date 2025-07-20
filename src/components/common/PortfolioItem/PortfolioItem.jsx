@@ -5,7 +5,7 @@ import "./PortfolioItem.css";
 function PortfolioItem({ data }) {
   return (
     <div className="portfolio">
-      <div className="portfolio-content">
+      <div className="group portfolio-content ">
         <div className="portfolio-image-container">
           {/* <FontAwesomeIcon className="portfolio-image" icon={faChartLine} /> */}
           <img className="portfolio-image" src={data.img} />
@@ -25,7 +25,7 @@ function PortfolioItem({ data }) {
                   {data.buttons.map((button, index) => (
                     <FontAwesomeIcon
                       key={index}
-                      className="portfolio-button"
+                      className="transition-all duration-300 hover:text-[var(--text-accent)] hover:scale-150 hover:cursor-pointer group-hover:animate-[pulse_500ms_ease-in-out_2]"
                       icon={button}
                     />
                   ))}
