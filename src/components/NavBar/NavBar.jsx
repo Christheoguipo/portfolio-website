@@ -2,14 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../common/Logo/Logo";
 import NavListItem from "./NavListItem";
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import PropTypes from "prop-types";
 
 function NavBar({ navItemData }) {
-
-
   const handleLinkClick = (ref) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -18,18 +16,23 @@ function NavBar({ navItemData }) {
         <Logo size="sm" />
         <div className="flex flex-col justify-center text-xs md:text-[clamp(1rem,1.3rem,1.5rem)] ">
           <span>Christheo Guipo</span>
-          <span className="text-[var(--text-accent)] text-[0.5rem] md:text-[clamp(0.6rem,0.8rem,1rem)]">Software Developer</span>
+          <span className="text-[var(--text-accent)] text-[0.5rem] md:text-[clamp(0.6rem,0.8rem,1rem)]">
+            Software Developer
+          </span>
         </div>
 
         <div className="h-full">
           <div className="hidden md:flex items-center justify-end h-full">
-            {navItemData && navItemData.map((item, index) => (
-              <NavListItem key={index} icon={item.icon} handleClick={() => handleLinkClick(item.ref)} />
-            )
-            )}
+            {navItemData &&
+              navItemData.map((item, index) => (
+                <NavListItem
+                  key={index}
+                  icon={item.icon}
+                  handleClick={() => handleLinkClick(item.ref)}
+                />
+              ))}
           </div>
           <div className="flex md:hidden items-center justify-end h-full ">
-
             <Popover>
               {({ close }) => (
                 <>
@@ -45,28 +48,38 @@ function NavBar({ navItemData }) {
                     className="absolute right-0 top-10 z-1000 flex w-screen max-w-fit bg-transparent transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-in data-leave:duration-150 data-leave:ease-in"
                   >
                     <div className="flex-auto bg-[#222]">
-                      {navItemData && navItemData.map((item, index) => (
-                        <div key={index} className="flex py-4">
-                          <NavListItem icon={item.icon} handleClick={() => {
-                            handleLinkClick(item.ref);
-                            close();
-                          }} />
-                        </div>
-                      )
-                      )}
-
+                      {navItemData &&
+                        navItemData.map((item, index) => (
+                          <div key={index} className="flex py-4">
+                            <NavListItem
+                              icon={item.icon}
+                              handleClick={() => {
+                                handleLinkClick(item.ref);
+                                close();
+                              }}
+                            />
+                          </div>
+                        ))}
                     </div>
                   </PopoverPanel>
                 </>
               )}
-
             </Popover>
-
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+NavBar.propTypes = {
+  navItemData: PropTypes.arrayOf(
+    PropTypes.shape({
+      ref: PropTypes.object,
+      icon: PropTypes.object,
+      title: PropTypes.string,
+    })
+  ),
+};
 
 export default NavBar;
