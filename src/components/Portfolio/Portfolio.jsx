@@ -6,14 +6,14 @@ import PortfolioItem from "../common/PortfolioItem/PortfolioItem";
 const portfolioData = [
   {
     title: "Xter Portal",
-    img: "./images/xter-portal.png",
+    img: "/images/xter-portal.png",
     description:
       "Employee portal with dashboards and profile management built using Next.js.",
     skills: ["Next.js", "MSSQL", "TailwindCSS"],
   },
   {
     title: "Reactivities",
-    img: "./images/reactivities.png",
+    img: "/images/reactivities.png",
     buttons: [
       {
         icon: faGithubAlt,
@@ -26,14 +26,14 @@ const portfolioData = [
   },
   {
     title: "OPS",
-    img: "./images/ops.png",
+    img: "/images/ops.png",
     description:
       "Internal ERP system for tracking sales, inventory and collections with reporting for decision-making.",
     skills: ["C#", "MSSQL", "WinForms", "TFS", "Crystal Report"],
   },
   {
     title: "Movie Vault",
-    img: "./images/movie-vault.png",
+    img: "/images/movie-vault.png",
     buttons: [
       { icon: faRocket, link: "https://retro-movie-vault.netlify.app/" },
       {
@@ -47,7 +47,7 @@ const portfolioData = [
   },
   {
     title: "myFlix",
-    img: "./images/my-flix.png",
+    img: "/images/my-flix.png",
     buttons: [
       {
         icon: faRocket,
@@ -64,7 +64,7 @@ const portfolioData = [
   },
   {
     title: "Meet App",
-    img: "./images/meet-app.png",
+    img: "/images/meet-app.png",
     buttons: [
       { icon: faGithubAlt, link: "https://github.com/Christheoguipo/meet" },
     ],
@@ -74,7 +74,7 @@ const portfolioData = [
   },
   {
     title: "Chat Demo",
-    img: "./images/chat-demo.png",
+    img: "/images/chat-demo.png",
     buttons: [
       {
         icon: faGithubAlt,
@@ -87,7 +87,7 @@ const portfolioData = [
   },
   {
     title: "Movie Vault API",
-    img: "./images/movie-vault-api.png",
+    img: "/images/movie-vault-api.png",
     buttons: [
       {
         icon: faGithubAlt,
@@ -112,7 +112,7 @@ function Portfolio({ portfolioRef }) {
                  linear-gradient(336deg, rgb(221, 77, 77), rgba(247, 247, 247, 0) 70.71%)`,
       }}
     >
-      <span className="text-2xl md:text-3xl font-bold mt-4 mb-10 block">
+      <span className="text-2xl md:text-3xl font-bold mt-4 mb-10 block text-center">
         Portfolio
       </span>
       <div className="flex flex-wrap content-center justify-center gap-4 2xl:grid 2xl:grid-cols-4 2xl:!gap-10">

@@ -78,7 +78,7 @@ const experience = [
   },
   {
     date: "Jun 2007 - Mar 2011",
-    title: "Bachelor of Science in Computer Science",
+    title: "BSc Computer Science",
     company: "Notre Dame of Dadiangas University, Philippines",
     task: "",
     skills: ["SDLC", "Turbo Pascal", "VB"],
@@ -89,7 +89,11 @@ const experience = [
 
 function Experience({ experienceRef }) {
   return (
-    <section ref={experienceRef} id="experience" className="scroll-mt-[var(--navbar-height)]">
+    <section
+      ref={experienceRef}
+      id="experience"
+      className="scroll-mt-[var(--navbar-height)]"
+    >
       <div className="h-full bg-[#e0e0e0] py-8 justify-center justify-items-center">
         <span className="text-2xl md:text-3xl font-bold text-black my-4 block text-center">
           Experience and Education
@@ -124,11 +128,16 @@ function Experience({ experienceRef }) {
                 <span className="block text-xs md:text-sm opacity-80">
                   {exp.company}
                 </span>
-                <span className="block text-xs md:text-sm my-2">{exp.task}</span>
+                <span className="block text-xs md:text-sm my-2">
+                  {exp.task}
+                </span>
                 <div>
                   {exp.skills &&
                     exp.skills.map((skill, index) => (
-                      <div key={index} className="inline-flex m-1 py-1 px-2 text-xs md:text-sm bg-[var(--blue10)] rounded-md">
+                      <div
+                        key={index}
+                        className="inline-flex m-1 py-1 px-2 text-xs md:text-sm bg-[var(--blue10)] rounded-md"
+                      >
                         {skill}
                       </div>
                     ))}

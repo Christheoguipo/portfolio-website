@@ -30,8 +30,8 @@ function Skills({ skillsRef }) {
         className="scroll-mt-[var(--navbar-height)] invisible md:!visible md:absolute z-10 w-full h-full left-0 top-0 bg-linear-to-b from-[rgba(16,31,76,0)] from-0% to-[#152964] to-70%"
       ></div>
       <img
-        className=" max-w-full w-full object-cover object-center opacity-50 md:opacity-60"
-        src="./images/laptop.webp"
+        className="max-w-full w-full object-cover object-center opacity-50 md:opacity-60"
+        src="/images/laptop.webp"
       />
       <div
         className="md:absolute md:z-20 w-full h-full left-0 top-0 py-4 md:!py-0 px-[10%] 
