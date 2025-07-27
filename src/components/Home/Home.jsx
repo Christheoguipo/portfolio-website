@@ -6,9 +6,9 @@ function Home({ homeRef }) {
     <section ref={homeRef} id="home" className="scroll-mt-20">
       <div className="overflow-hidden relative w-full h-svh">
         <picture>
-          <source srcSet="/images/mobile.jpg" media="(max-width: 640px)" />
+          <source srcSet="./images/mobile.jpg" media="(max-width: 640px)" />
           <img
-            src="/images/theo-landscape.jpg"
+            src="./images/theo-landscape.jpg"
             className="w-full h-full object-cover md:object-center"
           />
         </picture>

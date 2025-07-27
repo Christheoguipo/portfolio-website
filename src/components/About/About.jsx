@@ -36,7 +36,7 @@ function About({ aboutRef }) {
           className="!no-underline content-center text-center text-xs md:text-base w-30 md:w-48 h-8 md:h-12 bg-[var(--accent)] md:bg-[var(--background)] !text-[var(--text)] shadow-[0px_0px_25px_rgba(0,0,0,0.5)] 
           md:rounded-[10px] transition-all duration-200 hover:cursor-pointer hover:translate-y-[-5px] hover:shadow-[0px_0px_25px_var(--text-accent)]"
           target="_blank"
-          href="/downloads/CV.pdf"
+          href="./downloads/CV.pdf"
           rel="noopener noreferrer"
           title="CV.pdf"
         >
