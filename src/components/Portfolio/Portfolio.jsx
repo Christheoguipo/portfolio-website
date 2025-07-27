@@ -112,7 +112,7 @@ function Portfolio({ portfolioRef }) {
                  linear-gradient(336deg, rgb(221, 77, 77), rgba(247, 247, 247, 0) 70.71%)`,
       }}
     >
-      <span className="text-2xl md:text-3xl font-bold mt-4 mb-10 block">
+      <span className="text-2xl md:text-3xl font-bold mt-4 mb-10 block text-center">
         Portfolio
       </span>
       <div className="flex flex-wrap content-center justify-center gap-4 2xl:grid 2xl:grid-cols-4 2xl:!gap-10">

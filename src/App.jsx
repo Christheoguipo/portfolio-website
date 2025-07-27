@@ -1,4 +1,3 @@
-import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
@@ -18,7 +17,6 @@ import { useRef } from "react";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -52,7 +50,6 @@ function App() {
       title: "Portfolio",
     },
   ];
-
 
   return (
     <main className="relative w-full max-w-full lg:max-w-10/12 mx-auto">

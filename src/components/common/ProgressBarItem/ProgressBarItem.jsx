@@ -16,7 +16,7 @@ function ProgressBarItem({ skill }) {
       });
     }, 5);
     return () => clearInterval(timer);
-  }, []);
+  }, [skill.percent]);
 
   return (
     <ProgressBar
