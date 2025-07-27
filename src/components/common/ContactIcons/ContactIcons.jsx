@@ -14,6 +14,7 @@ function ContactIcons() {
         <FontAwesomeIcon
           className="text-[var(--text)] transition-all duration-200 cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl hover:text-[var(--text-accent)] hover:scale-125"
           icon={faGithub}
+          title="Github"
         />
       </a>
       <a
@@ -24,6 +25,7 @@ function ContactIcons() {
         <FontAwesomeIcon
           className="text-[var(--text)] transition-all duration-200 cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl hover:text-[var(--text-accent)] hover:scale-125"
           icon={faLinkedinIn}
+          title="LinkedIn"
         />
       </a>
       <a
