@@ -1,79 +1,70 @@
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
+import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
 
-import { useInView } from 'react-intersection-observer';
+import {
+  faAddressCard,
+  faBusinessTime,
+  faFolderOpen,
+  faHouse,
+  faWandMagicSparkles,
+} from "@fortawesome/free-solid-svg-icons";
+
+import Skills from "./components/Skills/Skills";
+import Experience from "./components/Experience/Experience";
+import Portfolio from "./components/Portfolio/Portfolio";
+import { useRef } from "react";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
-  const navLinkElements = document.querySelectorAll('.navigation-list-link');
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const experienceRef = useRef(null);
+  const portfolioRef = useRef(null);
 
-  const handleActiveNavLink = (currentSection) => {
+  const navItemData = [
+    {
+      ref: homeRef,
+      icon: faHouse,
+      title: "Home",
+    },
+    {
+      ref: aboutRef,
+      icon: faAddressCard,
+      title: "About",
+    },
+    {
+      ref: skillsRef,
+      icon: faWandMagicSparkles,
+      title: "Skills",
+    },
+    {
+      ref: experienceRef,
+      icon: faBusinessTime,
+      title: "Experience",
+    },
+    {
+      ref: portfolioRef,
+      icon: faFolderOpen,
+      title: "Portfolio",
+    },
+  ];
 
-    navLinkElements.forEach(navLinkElement => {
-      if (navLinkElement.href.includes(currentSection)) {
-        if (document.querySelector('.active')) {
-          document.querySelector('.active').classList.remove('active');
-        }
-
-        navLinkElement.classList.add('active');
-      }
-    });
-  }
-
-  const { ref: homeRef } = useInView({
-    threshold: 0.5,
-    onChange: (inView, entry) => {
-      if (inView) {
-        handleActiveNavLink(entry.target.id);
-      }
-    }
-  });
-
-  const { ref: aboutRef } = useInView({
-    threshold: 0.4,
-    onChange: (inView, entry) => {
-      if (inView) {
-        handleActiveNavLink(entry.target.id);
-      }
-    }
-  });
-
-  const { ref: projectsRef } = useInView({
-    threshold: 0.25,
-    onChange: (inView, entry) => {
-      if (inView) {
-        handleActiveNavLink(entry.target.id);
-      }
-    }
-  });
-
-  const { ref: contactRef } = useInView({
-    threshold: 0.5,
-    onChange: (inView, entry) => {
-      if (inView) {
-        handleActiveNavLink(entry.target.id);
-      }
-    }
-  });
 
   return (
-    <main>
-      <NavBar />
-
+    <main className="relative w-full max-w-full lg:max-w-10/12 mx-auto">
+      <NavBar navItemData={navItemData} />
       <Home homeRef={homeRef} />
-
       <About aboutRef={aboutRef} />
-
-      <Projects projectsRef={projectsRef} />
-
-      <Contact contactRef={contactRef} />
-
+      <Skills skillsRef={skillsRef} />
+      <Experience experienceRef={experienceRef} />
+      <Portfolio portfolioRef={portfolioRef} />
+      <Footer />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
