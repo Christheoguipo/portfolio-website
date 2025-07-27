@@ -11,7 +11,7 @@ function Logo({ size }) {
   return (
     <div className={sizeClass[size]}>
       <img
-        src="/images/logo.jpg"
+        src="./images/logo.jpg"
         className="w-full h-full object-cover object-center"
       />
     </div>

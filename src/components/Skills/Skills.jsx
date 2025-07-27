@@ -31,7 +31,7 @@ function Skills({ skillsRef }) {
       ></div>
       <img
         className="max-w-full w-full object-cover object-center opacity-50 md:opacity-60"
-        src="/images/laptop.webp"
+        src="./images/laptop.webp"
       />
       <div
         className="md:absolute md:z-20 w-full h-full left-0 top-0 py-4 md:!py-0 px-[10%] 
