@@ -16,7 +16,7 @@ function About({ aboutRef }) {
       <div className="md:w-10/12 px-8 md:p-8">
         <p className="relative inline-block italic font-bold text-2xl md:text-3xl z-1">
           Why me?
-          <span className="group-hover:h-4/12 group-hover:bg-[var(--accent)] group-hover:opacity-100 absolute -z-1 bottom-0 left-0 opacity-80 bg-[var(--text-accent)] w-[calc(100%)] h-1 transition-all duration-300"></span>
+          <span className="group-hover:h-4/12 h-4/12 md:h-1 group-hover:bg-[var(--accent)] bg-[var(--accent)] md:bg-[var(--text-accent)] group-hover:opacity-100 absolute -z-1 bottom-0 left-0 opacity-80 w-[calc(100%)] transition-all duration-300"></span>
         </p>
         <p className="text-xs md:text-base">
           I'm a dedicated software developer who values simplicity and
