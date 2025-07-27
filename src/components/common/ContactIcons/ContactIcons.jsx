@@ -1,19 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons/faEnvelope";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons/faWhatsapp";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function ContactIcons() {
   return (
-    <div className="flex gap-4 pt-4">
+    <div className="flex gap-3 md:!gap-4 pt-2 md:!pt-4 justify-end md:!justify-normal">
       <a
         target="_blank"
         href="https://github.com/Christheoguipo"
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon
-          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-2xl hover:text-[var(--text-accent)] hover:scale-125"
+          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl hover:text-[var(--text-accent)] hover:scale-125"
           icon={faGithub}
         />
       </a>
@@ -23,7 +22,7 @@ function ContactIcons() {
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon
-          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-2xl hover:text-[var(--text-accent)] hover:scale-125"
+          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl hover:text-[var(--text-accent)] hover:scale-125"
           icon={faLinkedinIn}
         />
       </a>
@@ -34,11 +33,10 @@ function ContactIcons() {
         title="christheo.guipo@gmail.com"
       >
         <FontAwesomeIcon
-          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-2xl hover:text-[var(--text-accent)] hover:scale-125"
+          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl hover:text-[var(--text-accent)] hover:scale-125"
           icon={faEnvelope}
         />
       </a>
-      {/* <FontAwesomeIcon className="icons" icon={faWhatsapp} /> */}
     </div>
   );
 }

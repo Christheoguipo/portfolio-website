@@ -19,7 +19,7 @@ function Carousel() {
         clickable: true,
       }}
       autoplay={{
-        delay: 2500,q 
+        delay: 2500,
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Pagination]}
@@ -27,11 +27,11 @@ function Carousel() {
     >
       {data.map((data, index) => (
         <SwiperSlide key={index}>
-          <span className="years">
+          <span className="text-3xl md:text-5xl font-semibold md:ml-4 leading-8 md:text-right">
             {data.years}
-            <span className="plus">+</span>
+            <span className="md:font-normal md:text-4xl text-[var(--text-accent)]">+</span>
           </span>
-          <span className="slide-text">{data.text}</span>
+          <span className="max-w-30 md:max-w-38 inline-block text-xs md:text-base text-left">{data.text}</span>
         </SwiperSlide>
       ))}
     </Swiper>

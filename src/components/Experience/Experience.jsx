@@ -3,7 +3,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import "./Experience.css";
 
 import PropTypes from "prop-types";
 import {
@@ -90,17 +89,17 @@ const experience = [
 
 function Experience({ experienceRef }) {
   return (
-    <section ref={experienceRef} id="experience">
-      <div className="experience-container">
-        <span className="text-3xl font-bold text-black my-4 block">
+    <section ref={experienceRef} id="experience" className="scroll-mt-[var(--navbar-height)]">
+      <div className="h-full bg-[#e0e0e0] py-8 justify-center justify-items-center">
+        <span className="text-2xl md:text-3xl font-bold text-black my-4 block text-center">
           Experience and Education
         </span>
         <VerticalTimeline lineColor="var(--secondary)">
           {experience &&
             experience.map((exp, index) => (
               <VerticalTimelineElement
+                className="group"
                 key={index}
-                className="vertical-timeline-element"
                 contentStyle={{
                   backgroundColor: "var(--blue10)",
                   color: "#000",
@@ -108,6 +107,7 @@ function Experience({ experienceRef }) {
                 contentArrowStyle={{ borderRight: "7px solid  var(--blue10)" }}
                 date={exp.date}
                 iconStyle={{
+                  boxShadow: "0px 0px 5px black",
                   background: exp.isWorkExperience
                     ? "var(--accent)"
                     : "var(--blue)",
@@ -115,17 +115,20 @@ function Experience({ experienceRef }) {
                 }}
                 icon={<FontAwesomeIcon icon={exp.icon} />}
               >
-                <span className="vertical-timeline-element-title">
-                  {exp.title}
+                <span className="relative z-1">
+                  <span className="relative font-semibold text-[var(--accent)] md:text-black md:text-xl inline-block transition-all duration-300 group-hover:text-[var(--accent)]">
+                    {exp.title}
+                  </span>
+                  <span className="group-hover:h-12/12 group-hover:bg-[var(--accent)] group-hover:!opacity-0 absolute -z-1 md:bottom-0 left-0 opacity-60 bg-[var(--accent)] w-[calc(100%+0.5rem)] md:h-1 transition-all duration-300"></span>
                 </span>
-                <span className="vertical-timeline-element-subtitle">
+                <span className="block text-xs md:text-sm opacity-80">
                   {exp.company}
                 </span>
-                <span className="timeline-text">{exp.task}</span>
+                <span className="block text-xs md:text-sm my-2">{exp.task}</span>
                 <div>
                   {exp.skills &&
                     exp.skills.map((skill, index) => (
-                      <div key={index} className="tech-skill">
+                      <div key={index} className="inline-flex m-1 py-1 px-2 text-xs md:text-sm bg-[var(--blue10)] rounded-md">
                         {skill}
                       </div>
                     ))}

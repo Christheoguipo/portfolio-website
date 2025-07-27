@@ -20,9 +20,10 @@ function ProgressBarItem({ skill }) {
 
   return (
     <ProgressBar
+      style={{ width: "100%", marginBottom: "0.8rem" }}
       now={value}
       label={
-        <div className="progressbar-label">
+        <div className="flex justify-between w-full px-2">
           <span className="inline-block">{skill.text}</span>
           <span className="inline-block">{value}%</span>
         </div>
