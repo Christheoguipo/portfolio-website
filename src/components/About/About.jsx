@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import "./About.css";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -15,8 +14,9 @@ function About({ aboutRef }) {
     >
       {/* <div className="flex w-[80%] p-8 gap-16"> */}
       <div className="md:w-10/12 px-8 md:p-8">
-        <p className="relative inline-block italic font-bold text-2xl md:text-3xl z-1">Why me?
-          <span className="group-hover:h-4/12 group-hover:bg-[var(--accent)] group-hover:opacity-100 absolute -z-1 bottom-0 left-0 opacity-80 bg-[var(--text-accent)] w-[calc(100%)] h-1 transition-all duration-300"></span>
+        <p className="relative inline-block italic font-bold text-2xl md:text-3xl z-1">
+          Why me?
+          <span className="group-hover:h-4/12 h-4/12 md:h-1 group-hover:bg-[var(--accent)] bg-[var(--accent)] md:bg-[var(--text-accent)] group-hover:opacity-100 absolute -z-1 bottom-0 left-0 opacity-80 w-[calc(100%)] transition-all duration-300"></span>
         </p>
         <p className="text-xs md:text-base">
           I'm a dedicated software developer who values simplicity and
@@ -36,7 +36,7 @@ function About({ aboutRef }) {
           className="!no-underline content-center text-center text-xs md:text-base w-30 md:w-48 h-8 md:h-12 bg-[var(--accent)] md:bg-[var(--background)] !text-[var(--text)] shadow-[0px_0px_25px_rgba(0,0,0,0.5)] 
           md:rounded-[10px] transition-all duration-200 hover:cursor-pointer hover:translate-y-[-5px] hover:shadow-[0px_0px_25px_var(--text-accent)]"
           target="_blank"
-          href="/downloads/CV.pdf"
+          href="./downloads/CV.pdf"
           rel="noopener noreferrer"
           title="CV.pdf"
         >
