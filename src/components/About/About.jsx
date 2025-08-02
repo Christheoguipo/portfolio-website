@@ -1,19 +1,24 @@
 import PropTypes from "prop-types";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import Carousel from "../common/Carousel/Carousel";
 import Logo from "../common/Logo/Logo";
+import { useInView } from "react-intersection-observer";
 
 function About({ aboutRef }) {
+
+  const [whyMeRef, fadeInWhyMe] = useInView({ rootMargin: "0px", threshold: 0.7, triggerOnce: true });
+  const [lineRef, fadeInLine] = useInView({ rootMargin: "0px", threshold: 0.7, triggerOnce: true });
+  const [panelRef, fadeInPanel] = useInView({ rootMargin: "0px", threshold: 0.7, triggerOnce: true });
+
   return (
     <section
       ref={aboutRef}
       id="about"
-      className="flex flex-col group items-center h-full md:gap-y-4 md:py-20 bg-[var(--background)] scroll-mt-[var(--navbar-height)]"
+      className={`flex flex-col group items-center h-full md:gap-y-4 md:py-20 bg-[var(--background)] scroll-mt-[var(--navbar-height)] `}
     >
       {/* <div className="flex w-[80%] p-8 gap-16"> */}
-      <div className="md:w-10/12 px-8 md:p-8">
+      <div ref={whyMeRef} className={`md:w-10/12 px-8 md:p-8 transition-all duration-800 ease-in-out ${fadeInWhyMe ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-20"}`} >
         <p className="relative inline-block italic font-bold text-2xl md:text-3xl z-1">
           Why me?
           <span className="group-hover:h-4/12 h-4/12 md:h-1 group-hover:bg-[var(--accent)] bg-[var(--accent)] md:bg-[var(--text-accent)] group-hover:opacity-100 absolute -z-1 bottom-0 left-0 opacity-80 w-[calc(100%)] transition-all duration-300"></span>
@@ -29,9 +34,9 @@ function About({ aboutRef }) {
         </p>
       </div>
 
-      <div className="invisible md:!visible w-10/12 h-[1px] bg-[var(--white40)] md:!mt-4 mb-8 md:!mb-16"></div>
+      <div ref={lineRef} className={`invisible md:!visible w-10/12 h-[1px] bg-[var(--white40)] md:!mt-4 mb-8 md:!mb-16 duration-800 ease-in-out ${fadeInLine ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-20"}`}></div>
 
-      <div className="grid grid-rows-3 grid-cols-none pb-4 md:!pb-0 md:grid-rows-none gap-10 md:gap-0 md:grid-cols-3 bg-[var(--white10)] justify-items-center items-center md:h-28 md:w-10/12">
+      <div ref={panelRef} className={`grid grid-rows-3 grid-cols-none pb-4 md:!pb-0 md:grid-rows-none gap-10 md:gap-0 md:grid-cols-3 bg-[var(--white10)] justify-items-center items-center md:h-28 md:w-10/12 duration-800 ease-in-out ${fadeInPanel ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-20"}`}>
         <a
           className="!no-underline content-center text-center text-xs md:text-base w-30 md:w-48 h-8 md:h-12 bg-[var(--accent)] md:bg-[var(--background)] !text-[var(--text)] shadow-[0px_0px_25px_rgba(0,0,0,0.5)] 
           md:rounded-[10px] transition-all duration-200 hover:cursor-pointer hover:translate-y-[-5px] hover:shadow-[0px_0px_25px_var(--text-accent)]"

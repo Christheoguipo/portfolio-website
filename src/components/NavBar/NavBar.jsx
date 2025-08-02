@@ -4,14 +4,18 @@ import Logo from "../common/Logo/Logo";
 import NavListItem from "./NavListItem";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import PropTypes from "prop-types";
+import { useInView } from "react-intersection-observer";
 
 function NavBar({ navItemData }) {
+
+  const [ref, visible] = useInView({ rootMargin: "0px", threshold: 0, triggerOnce: true });
+
   const handleLinkClick = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div className="bg-[#222] sticky w-full top-0 z-100 lg:!pt-0 lg:!px-0 ">
+    <div ref={ref} className={`bg-[#222] sticky w-full top-0 z-100 lg:!pt-0 lg:!px-0 transition-all duration-800 ease-in-out ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/2"}`}>
       <div className="relative grid grid-cols-[auto_1fr_auto] min-h-[var(--navbar-height)] w-full h-full">
         <Logo size="sm" />
         <div className="flex flex-col justify-center text-xs md:text-[clamp(1rem,1.3rem,1.5rem)] ">
