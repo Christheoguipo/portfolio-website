@@ -12,6 +12,8 @@ import {
   faPlaneDeparture,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const experience = [
   {
@@ -88,6 +90,25 @@ const experience = [
 ];
 
 function Experience({ experienceRef }) {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useInView({ triggerOnce: true, rootMargin: "0px" })
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= "768") {
+        setIsMobile(true);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+
+  }, []);
+
   return (
     <section
       ref={experienceRef}
@@ -98,11 +119,13 @@ function Experience({ experienceRef }) {
         <span className="text-2xl md:text-3xl font-bold text-black my-4 block text-center">
           Experience and Education
         </span>
-        <VerticalTimeline lineColor="var(--secondary)">
+        <VerticalTimeline
+          animate={!isMobile}
+          lineColor="var(--secondary)">
           {experience &&
             experience.map((exp, index) => (
               <VerticalTimelineElement
-                className="group"
+                className={`group`}
                 key={index}
                 contentStyle={{
                   backgroundColor: "var(--blue10)",
