@@ -15,6 +15,7 @@ const portfolioData = [
     title: "Reactivities",
     img: "./images/reactivities.png",
     buttons: [
+      { icon: faRocket, link: "https://reactivities-web-app.azurewebsites.net/" },
       {
         icon: faGithubAlt,
         link: "https://github.com/Christheoguipo/ActivitiesApp",
