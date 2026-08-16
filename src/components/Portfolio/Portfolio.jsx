@@ -15,6 +15,7 @@ const portfolioData = [
     title: "Reactivities",
     img: "./images/reactivities.png",
     buttons: [
+      { icon: faRocket, link: "https://reactivities-web-app.azurewebsites.net/" },
       {
         icon: faGithubAlt,
         link: "https://github.com/Christheoguipo/ActivitiesApp",
@@ -109,13 +110,10 @@ function Portfolio({ portfolioRef }) {
       style={{
         background: `linear-gradient(127deg, #2147c4, rgba(255, 255, 255, 0) 70.71%),
                  linear-gradient(217deg, #15b141, rgba(255, 255, 255, 0) 70.71%),
-                 linear-gradient(336deg, rgb(221, 77, 77), rgba(247, 247, 247, 0) 70.71%)`,
-      }}
-    >
-      <span className="text-2xl md:text-3xl font-bold mt-4 mb-10 block text-center">
-        Portfolio
-      </span>
-      <div className="flex flex-wrap content-center justify-center gap-4 2xl:grid 2xl:grid-cols-4 2xl:!gap-10">
+                 linear-gradient(336deg, rgb(221, 77, 77), rgba(247, 247, 247, 0) 70.71%)`
+      }}>
+      <span className="text-2xl md:text-3xl font-bold mt-4 mb-10 block text-center">Portfolio</span>
+      <div className="flex flex-wrap justify-center 2xl:justify-items-center gap-4 2xl:grid 2xl:grid-cols-4">
         {portfolioData &&
           portfolioData.map((data, index) => (
             <PortfolioItem key={index} data={data} />

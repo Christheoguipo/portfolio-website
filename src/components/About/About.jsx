@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-
 import "swiper/css";
 import "swiper/css/pagination";
 
 function About({ aboutRef }) {
+ 
   return (
     <section
       ref={aboutRef}

@@ -16,7 +16,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const experience = [
-    {
+  {
     date: "Oct 2026 - Onwards",
     title: "Piscine",
     company: "42 Berlin",
@@ -127,11 +127,15 @@ function Experience({ experienceRef }) {
         <span className="text-left text-2xl md:text-3xl font-bold text-black block pb-4">
           Timeline
         </span>
-        <VerticalTimeline lineColor="var(--secondary)" layout="1-column" className="p-0 my-0">
+        <VerticalTimeline
+          lineColor="var(--secondary)"
+          layout="1-column"
+          className="p-0 my-0"
+        >
           {experience &&
             experience.map((exp, index) => (
               <VerticalTimelineElement
-                className="group"
+                className={`group`}
                 key={index}
                 contentStyle={{
                   color: "#000",
@@ -140,21 +144,26 @@ function Experience({ experienceRef }) {
                   borderRadius: "0px",
                   paddingBottom: "0px",
                   paddingTop: "0px",
-                  boxShadow: "0 0 0"
+                  boxShadow: "0 0 0",
                 }}
-                contentArrowStyle={{  borderRight: "7px solid  var(--background)" }}
+                contentArrowStyle={{
+                  borderRight: "7px solid  var(--background)",
+                }}
                 date={
                   <>
-                  <div className="text-xs mb-2" >{exp.date}</div>
-                  <div className="justify-items-end">
-                  {exp.skills &&
-                    exp.skills.map((skill, index) => (
-                      <div key={index} className="inline-flex mr-1 mb-1 py-1 px-2 text-xs bg-[var(--blue10)] rounded-md" >
-                        {skill}
-                      </div>
-                    ))}
-                </div>
-                        </>
+                    <div className="text-xs mb-2">{exp.date}</div>
+                    <div className="justify-items-end">
+                      {exp.skills &&
+                        exp.skills.map((skill, index) => (
+                          <div
+                            key={index}
+                            className="inline-flex mr-1 mb-1 py-1 px-2 text-xs bg-[var(--blue10)] rounded-md"
+                          >
+                            {skill}
+                          </div>
+                        ))}
+                    </div>
+                  </>
                 }
                 iconStyle={{
                   boxShadow: "0px 0px 5px black",
@@ -162,20 +171,20 @@ function Experience({ experienceRef }) {
                   color: "var(--accent)",
                 }}
                 icon={<FontAwesomeIcon icon={exp.icon} />}
-                style={{marginTop: "0px", marginBottom: "1rem"}}
+                style={{ marginTop: "0px", marginBottom: "1rem" }}
               >
                 <span className="relative z-1">
                   <span className="relative font-semibold text-[var(--accent)] md:text-black md:text-xl inline-block transition-all duration-300 group-hover:text-[var(--accent)]">
                     {exp.title}
                   </span>
                 </span>
-                
+
                 <span className="block text-xs md:text-sm opacity-80">
                   {exp.company}
                 </span>
                 <span className="block text-xs my-2 md:text-sm ">
                   {exp.task}
-                </span> 
+                </span>
               </VerticalTimelineElement>
             ))}
 
