@@ -5,14 +5,14 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function ContactIcons() {
   return (
-    <div className="flex gap-3 md:!gap-4 pt-2 md:!pt-4 justify-end md:!justify-normal">
+    <div className="flex gap-3 md:!gap-4 pt-2 md:pt-4 ">
       <a
         target="_blank"
         href="https://github.com/Christheoguipo"
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon
-          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl hover:text-[var(--text-accent)] hover:scale-125"
+          className="text-[var(--text)] transition-all duration-200 cursor-pointer md:text-2xl text-xl hover:text-[var(--highlight)] hover:scale-125"
           icon={faGithub}
           title="Github"
         />
@@ -23,7 +23,7 @@ function ContactIcons() {
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon
-          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl hover:text-[var(--text-accent)] hover:scale-125"
+          className="text-[var(--text)] transition-all duration-200 cursor-pointer md:text-2xl text-xl hover:text-[var(--highlight)] hover:scale-125"
           icon={faLinkedinIn}
           title="LinkedIn"
         />
@@ -35,7 +35,7 @@ function ContactIcons() {
         title="christheo.guipo@gmail.com"
       >
         <FontAwesomeIcon
-          className="text-[var(--text)] transition-all duration-200 cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl hover:text-[var(--text-accent)] hover:scale-125"
+          className="text-[var(--text)] transition-all duration-200 cursor-pointer md:text-2xl text-xl hover:text-[var(--highlight)] hover:scale-125"
           icon={faEnvelope}
         />
       </a>

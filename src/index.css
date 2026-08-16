@@ -12,8 +12,8 @@
   --white10: hsl(0, 0%, 100%, 10%);
   --white40: hsl(0, 0%, 100%, 40%);
   --white80: hsl(0, 0%, 100%, 80%);
-  --white90: hsl(0, 0%, 100%, 90%);
-  --background: hsl(0, 0%, 0%);
+  --white90: hsla(0, 0%, 100%, 0.902);
+  --background: #f5f5f0;
   --primary: hsl(217, 83%, 73%);
   --primary20: hsla(353, 83%, 73%, 0.2);
   --primary30: hsl(217, 83%, 73%, 30%);
@@ -27,7 +27,7 @@
   --secondary20: hsl(207, 100%, 94%, 60%);
   --accent: #2b7440;
   --accent80: hsl(16, 18%, 52%);
-  --text-accent: #2ff96b;
+  --text-accent: #02AD28 ; 
   --active-color: #30eb94;
 
   --swiper-pagination-color: var(--text-accent);
@@ -47,7 +47,7 @@
 
   --button-color: #293241;
 
-  --highlight: #ee6b4d;
+  --highlight: rgb(87, 255, 135);
   --text-color: white;
 
   --nav-link-color: grey;
@@ -83,3 +83,14 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+/* Vertical Timeline */
+.vertical-timeline::before { 
+  left: 20px;
+  width: 1px;
+}
+
+.vertical-timeline-element:last-child {
+  display: none;
+}
+

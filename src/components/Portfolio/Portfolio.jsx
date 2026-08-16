@@ -105,7 +105,7 @@ function Portfolio({ portfolioRef }) {
     <section
       ref={portfolioRef}
       id="portfolio"
-      className="justify-items-center py-8 px-0 w-full scroll-mt-[var(--navbar-height)]"
+      className="justify-items-center py-8 px-0 w-full md:scroll-mt-0 scroll-mt-[var(--navbar-height)]"
       style={{
         background: `linear-gradient(127deg, #2147c4, rgba(255, 255, 255, 0) 70.71%),
                  linear-gradient(217deg, #15b141, rgba(255, 255, 255, 0) 70.71%),
@@ -121,6 +121,7 @@ function Portfolio({ portfolioRef }) {
             <PortfolioItem key={index} data={data} />
           ))}
       </div>
+      <div className="text-sm pt-8 text-center">© Christheo Guipo 2026</div>
     </section>
   );
 }

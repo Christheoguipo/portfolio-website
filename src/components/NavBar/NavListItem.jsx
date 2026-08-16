@@ -1,22 +1,23 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from 'prop-types';
 
-function NavListItem({ icon, handleClick }) {
-
+function NavListItem({ item, handleClick }) {
+ 
     return (
 
-        <div className="flex h-full content-center px-0 md:px-1 transition-colors duration-300 cursor-pointer hover:bg-[var(--text-accent)]" onClick={handleClick}>
+        <div className="flex py-2 pl-2 md:px-1 rounded-md transition-colors duration-300 cursor-pointer hover:text-black hover:bg-[var(--highlight)]" onClick={handleClick}>
             <FontAwesomeIcon
-                className="h-auto w-5 py-0 px-3 hover:text-black hover:scale-125 transition-all duration-500"
-                icon={icon}
+                className="h-auto md:w-5 w-4 py-0 pl-1 pr-3 transition-all duration-300"
+                icon={item.icon}
             />
+            <span className="md:text-sm text-xs">{item.title}</span>
         </div>
 
     );
 }
 
 NavListItem.propTypes = {
-    icon: PropTypes.object,
+    item: PropTypes.object,
     handleClick: PropTypes.func
 }
 

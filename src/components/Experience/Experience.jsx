@@ -10,12 +10,41 @@ import {
   faGraduationCap,
   faRocket,
   faPlaneDeparture,
+  faLanguage,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const experience = [
+    {
+    date: "Oct 2026 - Onwards",
+    title: "Piscine",
+    company: "42 Berlin",
+    task: "Intensive coding challenge at 42 Berlin, learning C fundamentals through a gamified, peer-to-peer learning methodology.",
+    skills: ["C Programming"],
+    isWorkExperience: false,
+    icon: faCode,
+  },
   {
-    date: "Jan 2025 - Present",
+    date: "Nov 2025 - Apr 2026",
+    title: "B2 German Language",
+    company: "A&Qua GmbH",
+    task: "Intensive B2 German language course focused on professional communication.",
+    skills: ["German Language"],
+    isWorkExperience: false,
+    icon: faLanguage,
+  },
+  {
+    date: "Sep 2025 - Dec 2025",
+    title: "Full-Stack Circle",
+    company: "ReDI School",
+    task: "Built and presented full-stack web applications in agile teams using modern frontend and backend technologies.",
+    skills: ["TypeScript", "React", "Express", "Prisma", "PostgreSQL", "Git"],
+    isWorkExperience: false,
+    icon: faCode,
+  },
+  {
+    date: "Jan 2025 - Jun 2025",
     title: "Software Developer",
     company: "FuturePoint IT Solutions (Unpaid collaboration)",
     task: "Working on an internal employee portal with Next.js, where staff can track dashboards, apply for leave and manage their records.",
@@ -44,7 +73,7 @@ const experience = [
     date: "Aug 2015 - Aug 2020",
     title: "Software Developer",
     company: "Brigada Mass Media Corporation",
-    task: "Built and supported an in-house system in C# and SQL that helped 47+ branches manage sales, inventory and collections more efficiently.",
+    task: "Built and supported an in-house system in C# and SQL that helped over 47 branches manage sales, inventory and collections more efficiently.",
     skills: ["C#", "WinForms", "MSSQL", "TFS", "Crystal Report"],
     isWorkExperience: true,
     icon: faBriefcase,
@@ -92,56 +121,61 @@ function Experience({ experienceRef }) {
     <section
       ref={experienceRef}
       id="experience"
-      className="scroll-mt-[var(--navbar-height)]"
+      className="bg-[var(--background)] justify-items-center md:scroll-mt-0 scroll-mt-[var(--navbar-height)]"
     >
-      <div className="h-full bg-[#e0e0e0] py-8 justify-center justify-items-center">
-        <span className="text-2xl md:text-3xl font-bold text-black my-4 block text-center">
-          Experience and Education
+      <div className="xl:w-6/12 lg:w-8/12 w-10/12 h-full py-4">
+        <span className="text-left text-2xl md:text-3xl font-bold text-black block pb-4">
+          Timeline
         </span>
-        <VerticalTimeline lineColor="var(--secondary)">
+        <VerticalTimeline lineColor="var(--secondary)" layout="1-column" className="p-0 my-0">
           {experience &&
             experience.map((exp, index) => (
               <VerticalTimelineElement
                 className="group"
                 key={index}
                 contentStyle={{
-                  backgroundColor: "var(--blue10)",
                   color: "#000",
+                  borderBottom: "solid 0px black",
+                  backgroundColor: "var(--background)",
+                  borderRadius: "0px",
+                  paddingBottom: "0px",
+                  paddingTop: "0px",
+                  boxShadow: "0 0 0"
                 }}
-                contentArrowStyle={{ borderRight: "7px solid  var(--blue10)" }}
-                date={exp.date}
+                contentArrowStyle={{  borderRight: "7px solid  var(--background)" }}
+                date={
+                  <>
+                  <div className="text-xs mb-2" >{exp.date}</div>
+                  <div className="justify-items-end">
+                  {exp.skills &&
+                    exp.skills.map((skill, index) => (
+                      <div key={index} className="inline-flex mr-1 mb-1 py-1 px-2 text-xs bg-[var(--blue10)] rounded-md" >
+                        {skill}
+                      </div>
+                    ))}
+                </div>
+                        </>
+                }
                 iconStyle={{
                   boxShadow: "0px 0px 5px black",
-                  background: exp.isWorkExperience
-                    ? "var(--accent)"
-                    : "var(--blue)",
-                  color: "var(--text)",
+                  background: "var(--background)",
+                  color: "var(--accent)",
                 }}
                 icon={<FontAwesomeIcon icon={exp.icon} />}
+                style={{marginTop: "0px", marginBottom: "1rem"}}
               >
                 <span className="relative z-1">
                   <span className="relative font-semibold text-[var(--accent)] md:text-black md:text-xl inline-block transition-all duration-300 group-hover:text-[var(--accent)]">
                     {exp.title}
                   </span>
-                  <span className="group-hover:h-12/12 group-hover:bg-[var(--accent)] group-hover:!opacity-0 absolute -z-1 md:bottom-0 left-0 opacity-60 bg-[var(--accent)] w-[calc(100%+0.5rem)] md:h-1 transition-all duration-300"></span>
                 </span>
+                
                 <span className="block text-xs md:text-sm opacity-80">
                   {exp.company}
                 </span>
-                <span className="block text-xs md:text-sm my-2">
+                <span className="block text-xs my-2 md:text-sm ">
                   {exp.task}
-                </span>
-                <div>
-                  {exp.skills &&
-                    exp.skills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className="inline-flex m-1 py-1 px-2 text-xs md:text-sm bg-[var(--blue10)] rounded-md"
-                      >
-                        {skill}
-                      </div>
-                    ))}
-                </div>
+                </span> 
               </VerticalTimelineElement>
             ))}
 
